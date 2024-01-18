@@ -1,0 +1,29 @@
+# Python Templates Project
+
+```shell
+cookiecutter https://github.com/fluent-qa/fluent-pypro-template.git
+```
+
+Follow the instruction to generate a template project.
+
+## Use Poetry as Dependency Management tools
+
+```shell
+poetry init 
+poetry add <package_name>
+poetry add <package_name> --group dev/test
+poetry build
+poetry install
+```
+
+## Other tips
+
+- pre-commit for python project 
+- lint/format/cleanup make command, please refer make file 
+
+## How to Create template
+
+- cookiecutter based 
+- generate files: hooks
+  * post_gen_project.py
+  * pre_gen_project.py

@@ -4,3 +4,18 @@
 [submodule "fluentqa-pytpl"]
 	path = fluentqa-pytpl
 	url = https://github.com/fluent-qa/fluentqa-pytpl.git
+[submodule "fluentqa-pybase"]
+	path = fluentqa-pybase
+	url = https://github.com/fluent-qa/fluentqa-pybase.git
+[submodule "fluentqa-helper"]
+	path = fluentqa-helper
+	url = https://github.com/fluent-qa/fluentqa-helper.git
+[submodule "fluent-structs"]
+	path = fluent-structs
+	url = https://github.com/fluent-qa/fluent-structs.git
+[submodule "fluentqa-pdao"]
+	path = fluentqa-pdao
+	url = https://github.com/fluent-qa/fluentqa-pdao.git
+[submodule "qpyone"]
+	path = qpyone
+	url = https://github.com/qdriven/qpyone.git
