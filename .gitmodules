@@ -1,0 +1,3 @@
+[submodule "fluentqa-checker"]
+	path = fluentqa-checker
+	url = git@github.com:fluent-qa/fluentqa-checker.git
