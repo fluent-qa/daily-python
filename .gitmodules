@@ -1,0 +1,3 @@
+[submodule "qpytpl"]
+	path = qpytpl
+	url = https://github.com/fluent-qa/fluentqa-pytpl.git
