@@ -1,3 +1,6 @@
 [submodule "qpytpl"]
 	path = qpytpl
 	url = https://github.com/fluent-qa/fluentqa-pytpl.git
+[submodule "qpyconf"]
+	path = qpyconf
+	url = git@github.com:fluent-qa/qpyconf.git
