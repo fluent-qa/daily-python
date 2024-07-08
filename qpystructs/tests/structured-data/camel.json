@@ -1,0 +1,13 @@
+{
+  "key": "v1",
+  "kList": [
+    "test",
+    "t2"
+  ],
+  "kObj": {
+    "k1": "v1",
+    "k2": "v2"
+  },
+  "kBool": true,
+  "kNum": 4.3
+}

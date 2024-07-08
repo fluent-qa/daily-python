@@ -1,0 +1,8 @@
+{
+  "key": "v1",
+  "key2": "v2",
+  "k_list": ["test","t2"],
+  "k_obj": {"k1": "v1","k2": "v2"},
+  "k_bool": true,
+  "k_num": 4.3
+}

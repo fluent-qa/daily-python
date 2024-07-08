@@ -1,0 +1,6 @@
+[
+  {"k": "v"},
+  {"i": 10},
+  {"array_object":["AnyObject","自找麻烦"]},
+  {"key": {"k": "anyObject"}}
+]
