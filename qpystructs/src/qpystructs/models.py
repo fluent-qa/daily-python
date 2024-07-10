@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TypeVar
+from typing import TypeVar, Any, Type
 from typing import Union
 
 import re
@@ -47,15 +47,15 @@ class BaseDataModel(GenericDataModel):
 
 
 def parse_as(
-        json_or_dict: str | dict, to_type: Union[GenericDataModel, BaseDataModel, BaseModel]
-):
+        json_or_dict: str | dict, to_type: Type[GenericDataModel, BaseDataModel, BaseModel]
+) -> Union[GenericDataModel, BaseDataModel, BaseModel, Any]:
     if isinstance(json_or_dict, str):
-        return pydantic.parse_raw_as(to_type, json_or_dict)
+        return to_type.parse_raw(json_or_dict)
     else:
-        return pydantic.TypeAdapter.validate_python(to_type, json_or_dict)
+        return to_type.parse_obj(json_or_dict)
 
 
-def to_json(obj: Union[GenericDataModel, BaseDataModel, BaseModel]):
+def to_json(obj: Union[GenericDataModel, BaseDataModel, BaseModel]) -> str:
     if isinstance(obj, GenericDataModel) or isinstance(obj, BaseDataModel):
         return obj.to_json()
     else:

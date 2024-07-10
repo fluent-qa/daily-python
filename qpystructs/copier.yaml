@@ -1,0 +1,62 @@
+_envops:
+  block_end_string: '%]'
+  block_start_string: '[%'
+_subdirectory: template
+_message_before_copy: |
+  Thanks for generating a project using our template.
+
+  You'll be asked a series of questions whose answers will be used to
+  generate a tailored project for you.
+_message_after_copy: |
+  Your project "{{ project_name }}" has been created successfully!
+_message_before_update: |
+  Thanks for updating your project using our template.
+
+  You'll be asked a series of questions whose answers are pre-populated
+  with previously entered values. Feel free to change them as needed.
+_message_after_update: |
+  Your project "{{ project_name }}" has been updated successfully!
+  In case there are any conflicts, please resolve them. Then,
+  you're done.
+project_name:
+  default: My Project
+  help: 'Enter the name of the project in CamelCase format:'
+  type: str
+project_description:
+  default: Project brief description.
+  help: "Provide a concise description to be used in the Python package overview and the introductory paragraph in the README and documentation's index page:"
+  type: str
+
+author_name:
+  default: Your Name
+  help: 'Specify the name of the author:'
+  type: str
+organization_name:
+  default: Your Organization Name
+  help: 'Provide the name of the organization associated with the project:'
+  type: str
+copyright_holder:
+  default: '{{ organization_name }}'
+  help: Name(s) or organization(s) holding the copyright.
+  type: str
+author_email:
+  default: '{{ author_name|lower|replace(" ", ".") }}@{{ organization_name|lower|replace(" ", "-") }}.com'
+  help: 'Specify the email address of the author:'
+  type: str
+
+repo_namespace:
+  default: '{{ organization_name|lower|replace(" ", "-") }}'
+  help: 'Indicate the GitHub Repository Owner or GitLab Namespace. This is typically the account name of the author or the organization:'
+  type: str
+repo_name:
+  default: '{{ project_name|lower|replace(" ", "-") }}'
+  help: 'Provide a name for the repository:'
+  type: str
+package_name:
+  default: '{{ repo_name|regex_replace("-python$", "") }}'
+  help: 'Specify the name of the distributable package for the project (often used in "pip install <package_name>"):'
+  type: str
+module_name:
+  default: '{{ package_name|lower|replace("-", "_") }}'
+  help: 'Specify the name of the primary module within the package (often used in "import <module_name>"):'
+  type: str
