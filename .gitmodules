@@ -4,3 +4,6 @@
 [submodule "qpyconf"]
 	path = qpyconf
 	url = git@github.com:fluent-qa/qpyconf.git
+[submodule "qpystructs"]
+	path = qpystructs
+	url = https://github.com/fluent-qa/qpystructs.git
