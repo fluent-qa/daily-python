@@ -1,0 +1,20 @@
+[project]
+name = "maigctester"
+version = "0.1.0"
+description = "maigctester using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0"
+]
+
+[project.scripts]
+maigctester = "maigctester.main:run"
+run_crew = "maigctester.main:run"
+train = "maigctester.main:train"
+replay = "maigctester.main:replay"
+test = "maigctester.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

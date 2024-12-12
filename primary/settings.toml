@@ -1,0 +1,6 @@
+[default]
+databases = { default = { db_url = "postgresql+psycopg://postgres:postgres@127.0.0.1:5432/workspace" } }
+pg_url = "postgresql+psycopg://postgres:postgres@127.0.0.1:5432/workspace"
+pg_a_url = "postgresql+psycopg_async://postgres:postgres@127.0.0.1:5432/workspace"
+workspace = ""
+REWORKSPACE = ""

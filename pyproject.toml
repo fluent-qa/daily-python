@@ -1,0 +1,17 @@
+[project]
+name = "pyway"
+version = "0.1.0"
+description = "Personal Python Collections"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+datafarm = "datafarm:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+members = ["agents/*", "primary", "shared/*", "toolkits/*"]

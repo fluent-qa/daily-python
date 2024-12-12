@@ -1,0 +1,28 @@
+[project]
+name = "primary"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "drissionpage>=4.1.0.13",
+    "markdown>=3.7",
+    "pandas>=2.2.3",
+    "pdfkit>=1.0.0",
+    "playwright>=1.49.1",
+    "pytest>=8.3.4",
+    "qpydao",
+    "requests>=2.32.3",
+    "rich>=13.9.4",
+    "weasyprint>=63.1",
+]
+
+[project.scripts]
+primary = "primary:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+qpydao = { git = "https://github.com/fluent-qa/qpydao.git", rev = "main" }
