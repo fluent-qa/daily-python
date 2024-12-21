@@ -1,32 +1,20 @@
 # README
 
-## Template Project/Starter Project
+Daily Python Practice Libs.
 
-- [fluentqa-pytpl](https://github.com/fluent-qa/fluentqa-pytpl.git)
+## ```uv``` for mono  python repo
 
-Two ways to create a new python project:
+use ```uv``` to manage the project. super fast than pdm and poetry.
 
-- create project by copier:
+[uv reference](https://docs.astral.sh/uv/), why use uv? Two key points:
 
-```sh
-copier copy --trust https://github.com/fluent-qa/fluentqa-pytpl.git my-project
-```
+1. Fast,really fast
 
-- create project by pdm
+![uv](https://github.com/astral-sh/uv/assets/1309177/03aa9163-1c79-4a87-a31d-7a9311ed9310#only-dark)
 
-```sh
-mkdir my-project && cd my-project
-pdm init https://github.com/fluent-qa/fluentqa-pytpl.git
-```
+2. easy to manage mono python repo, no need to worry about the dependency conflict
 
-## Daily base Libraries
+And also similar to pdm and poetry, easy to migrate and understand the concepts.
 
-- [qpyconf](https://github.com/fluent-qa/qpyconf.git) [All in one configuration](https://github.com/fluent-qa/qpyconf/blob/main/README.md)
-- [fluentqa-structs](https://github.com/fluent-qa/fluent-structs) for different data format
-- [qpydao](https://github.com/fluent-qa/fluentqa-pdao.git) for database operations
-- [fluentqa-checker](https://github.com/fluent-qa/fluentqa-checker.git) for verify
+## Project/Lib Structure and Usage
 
-
-## Tutorials
-
-- [30minutes-per-lib](https://github.com/fluent-qa/pyqa-30min.git) python 30 minutes per lib tutorial

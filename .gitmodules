@@ -1,0 +1,15 @@
+[submodule "shared/qpydao"]
+	path = shared/qpydao
+	url = https://github.com/fluent-qa/qpydao.git
+[submodule "shared/qpyci"]
+	path = shared/qpyci
+	url = https://github.com/fluent-qa/qpyconf.git
+[submodule "shared/qpystructs"]
+	path = shared/qpystructs
+	url = https://github.com/fluent-qa/qpystructs.git
+[submodule "shared/qpyhelper"]
+	path = shared/qpyhelper
+	url = https://github.com/fluent-qa/fluentqa-helper.git
+[submodule "shared/qpy-tpl"]
+	path = shared/qpy-tpl
+	url = https://github.com/fluent-qa/fluentqa-pytpl.git
