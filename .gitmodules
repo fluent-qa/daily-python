@@ -11,3 +11,9 @@
 [submodule "shared/qpy-tpl"]
 	path = shared/qpy-tpl
 	url = https://github.com/fluent-qa/fluentqa-pytpl.git
+[submodule "shared/qpyci"]
+	path = shared/qpyci
+	url = https://github.com/fluent-qa/qpyci.git
+[submodule "shared/qpyconf"]
+	path = shared/qpyconf
+	url = https://github.com/fluent-qa/qpyconf.git
