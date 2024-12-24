@@ -14,4 +14,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv.workspace]
-members = ["agents/*", "primary", "shared/*"]
+members = ["agents/*", "datafarm/*", "appkits/*"]

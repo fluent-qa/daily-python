@@ -4,7 +4,7 @@ Daily Python Practice Libs.
 
 ## ```uv``` for mono  python repo
 
-use ```uv``` to manage the project. super fast than pdm and poetry.
+use ```uv``` to manage the project. superfast than pdm and poetry.
 
 [uv reference](https://docs.astral.sh/uv/), why use uv? Two key points:
 
@@ -18,3 +18,14 @@ And also similar to pdm and poetry, easy to migrate and understand the concepts.
 
 ## Project/Lib Structure and Usage
 
+**shared folder**:
+
+```
+shared
+├── qpy-tpl: template project
+├── qpyci： ci helper project
+├── qpyconf: configuration project
+├── qpydao: dao project
+├── qpyhelper: helper project to capture api request
+└── qpystructs: structures project
+```
