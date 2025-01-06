@@ -5,7 +5,44 @@ description = "Add your description here"
 readme = "README.md"
 
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "gradio>=5.9.1",
+    "gradio-webrtc",
+    "numpy",
+    "websockets",
+    "twilio",
+    "Pillow",
+    "opencv-python",
+    "librosa",
+    "pydub",
+    "gradio_webrtc[vad]",
+    "numba==0.60.0",
+    "python-dotenv",
+    "modelscope-studio",
+    "anthropic>=0.42.0",
+    "google-generativeai>=0.8.3",
+    "openai>=1.58.1",
+    "lumaai>=1.2.2",
+    "cohere>=5.13.4",
+    "crewai>=0.86.0",
+    "langchain>=0.3.13",
+    "langchain-openai>=0.2.14",
+    "crewai-tools>=0.17.0",
+    "hyperbolic>=2.0.0",
+    "jupyter-notebook-parser>=0.1.4",
+    "manimgl>=1.7.2",
+    "box>=0.1.5",
+    "pytest>=8.3.4",
+    "lxml>=5.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "flake8"
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -55,12 +92,12 @@ dev = [
 [tool.ruff]
 line-length = 120
 target-version = "py39"
-include = ["qpyapp/**/*.py", "tests/**/*.py", "docs/**/*.py"]
+include = ["src/**/*.py", "tests/**/*.py", "docs/**/*.py"]
 
 [tool.ruff.lint]
 extend-select = ["Q", "RUF100", "C90", "UP", "I", "D"]
 flake8-quotes = { inline-quotes = "single", multiline-quotes = "double" }
-isort = { combine-as-imports = true, known-first-party = ["qpyconf"] }
+isort = { combine-as-imports = true, known-first-party = ["src"] }
 mccabe = { max-complexity = 15 }
 ignore = [
     "D100", # ignore missing docstring in module
@@ -81,7 +118,7 @@ quote-style = "single"
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["D"]
 "docs/**/*.py" = ["D"]
-"src/qpyconf/**/*.py" = ["D101", "D103"]
+"src/**/*.py" = ["D101", "D103"]
 
 
 [tool.pytest.ini_options]
@@ -96,7 +133,7 @@ addopts = [
     "--durations",
     "0",
     "--cov",
-    "qpyconf",
+    "qpycases"
 ]
 log_cli = true
 log_cli_level = "info"

@@ -1,0 +1,50 @@
+meta-libs:
+  - https://github.com/coady/multimethod.git
+  - https://github.com/Aran-Fey/introspection.git
+  - https://github.com/ikalnytskyi/picobox
+  - https://github.com/allrod5/injectable.git
+  - https://github.com/kodemore/kink.git
+
+infra:
+  - https://github.com/restackio
+  - https://github.com/meta-llama/llama-stack
+  - https://github.com/Zipstack/unstract
+tools:
+  - https://github.com/Byaidu/PDFMathTranslate.git
+  - https://github.com/DS4SD/docling
+  - https://github.com/linkwarden/linkwarden
+  - https://github.com/gitroomhq/postiz-app
+  - https://github.com/daveshanley/vacuum
+  - https://github.com/midday-ai
+  - https://github.com/lecca-digital/lecca-io.git
+  - https://github.com/DrewThomasson/ebook2audiobook
+  - https://github.com/CopilotKit/CopilotKit.git
+  - https://github.com/janhq/jan
+  - https://github.com/QwenLM/Qwen-Agent
+  - https://github.com/microsoft/PromptWizard.git
+  - https://github.com/PatrickJS/awesome-cursorrules.git
+  - https://github.com/Ironclad/rivet.git
+  - https://github.com/microsoft/markitdown.git
+saas-tools:
+  - https://github.com/weijunext/indie-hacker-tools
+  - https://github.com/mckaywrigley/mckays-app-template
+testing:
+  - https://github.com/heiko-hotz/genai-agent-tool-selection-testing
+ideas:
+  - https://github.com/vthinkxie/ai-recorder
+browser:
+  - https://github.com/browserbase/stagehand.git
+tutorials:
+  - https://training.talkpython.fm/
+  - https://github.com/codecrafters-io/build-your-own-x
+  - https://github.com/anthropics/anthropic-cookbook.git
+news:
+  - https://github.com/Freelander/AI-Dail
+  - https://github.com/Justin3go/FAV0.git
+agents:
+  - https://github.com/virattt/ai-financial-agent.git
+chains-tools:
+  - https://github.com/pcaversaccio/create2deployer
+  - https://github.com/project-89/whitepaper/tree/main
+  - https://github.com/0xPlaygrounds/rig
+  - https://github.com/steven2358/awesome-blockchain-ai.git
