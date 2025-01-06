@@ -8,8 +8,8 @@ from httpx._types import (URLTypes, RequestContent, RequestData, RequestFiles, Q
                           CookieTypes,
                           AuthTypes, TimeoutTypes, RequestExtensions)
 from urllib3.exceptions import MaxRetryError, NewConnectionError
-from adspower.exceptions import UnavailableAPIError
-from adspower._base_http_client import _BaseHTTPClient
+from  primary.adspower.exceptions import UnavailableAPIError
+from  primary.adspower._base_http_client import _BaseHTTPClient
 
 
 class HTTPClient(AsyncClient, _BaseHTTPClient):

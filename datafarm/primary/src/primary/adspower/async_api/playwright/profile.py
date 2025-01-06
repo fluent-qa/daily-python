@@ -1,10 +1,10 @@
 from datetime import datetime
 from typing import Optional, AsyncContextManager
-from adspower.async_api._base_profile import _BaseProfile
-from adspower.async_api.group import Group
-from adspower.async_api.category import Category
+from primary.adspower.async_api._base_profile import _BaseProfile
+from primary.adspower.async_api.group import Group
+from primary.adspower.async_api.category import Category
 from playwright.async_api import async_playwright, BrowserContext, Playwright, Browser
-from adspower.types import IpChecker
+from primary.adspower.types import IpChecker
 
 
 class Profile(_BaseProfile):

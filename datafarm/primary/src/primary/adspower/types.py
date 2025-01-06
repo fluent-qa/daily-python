@@ -1,6 +1,6 @@
-from typing import TypedDict, Literal, NotRequired, Any, Callable
+from typing import TypedDict, Literal, NotRequired, Any, Callable, Union
 
-HandlingTuple = tuple[dict[str, dict | str], Callable[[dict[str, Any]], Any] | Callable[[], Any]]
+HandlingTuple = tuple[dict[str, Union[dict, str]], Union[Callable[[dict[str, Any]], Any], Callable[[], Any]]]
 
 ProxySoft = Literal['luminati', 'lumauto', 'oxylabsatuto', '922S5', 'ipideaauto', 'ipfoxyauto', 'ssh', 'other',
                     'no_proxy']
@@ -14,7 +14,7 @@ DeviceNameType = Literal[0, 1, 2]
 MediaDeviceType = Literal[0, 1, 2]
 GPUType = Literal[0, 1, 2]
 WebGLVersion = Literal[0, 2, 3]
-Cookies = list[dict[str, Any]] | dict[str, Any]
+Cookies = Union[list[dict[str, Any]], dict[str, Any]]
 IntBool = Literal[0, 1]
 
 UserSortKey = Literal['serial_number', 'last_open_time', 'created_time']

@@ -1,6 +1,6 @@
 from typing import ClassVar, Optional
 from typing import Self
-from adspower._base_group import _BaseGroup
+from  primary.adspower._base_group import _BaseGroup
 from .http_client import HTTPClient
 
 

@@ -1,11 +1,11 @@
 from datetime import datetime
 from typing import Optional, Self, Any
 from abc import ABC, abstractmethod
-from adspower._api_entity import _APIEntity
+from primary.adspower._api_entity import _APIEntity
 from ._base_group import _BaseGroup as Group
 from ._base_category import _BaseCategory as Category
-from adspower.types import (ProxyConfig, Cookies, FingerprintConfig, RepeatConfigType, ProfileInfo,
-                            UserSort, IpChecker, HandlingTuple)
+from primary.adspower.types import (ProxyConfig, Cookies, FingerprintConfig, RepeatConfigType, ProfileInfo,
+                                    UserSort, IpChecker, HandlingTuple)
 from .exceptions import InvalidProxyConfig
 
 

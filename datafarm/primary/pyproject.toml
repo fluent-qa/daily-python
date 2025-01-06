@@ -14,6 +14,7 @@ dependencies = [
     "qpydao",
     "requests>=2.32.3",
     "rich>=13.9.4",
+    "seleniumbase>=4.33.11",
     "weasyprint>=63.1",
 ]
 

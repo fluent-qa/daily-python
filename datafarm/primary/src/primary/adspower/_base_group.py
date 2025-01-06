@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import Optional, Any
 from typing import Self
-from adspower.types import GroupInfo
-from adspower._api_entity import _APIEntity
-from adspower.types import HandlingTuple
-from adspower.utils import _convert_json
+from primary.adspower.types import GroupInfo
+from primary.adspower._api_entity import _APIEntity
+from primary.adspower.types import HandlingTuple
+from primary.adspower.utils import _convert_json
 
 
 class _BaseGroup(_APIEntity, ABC):

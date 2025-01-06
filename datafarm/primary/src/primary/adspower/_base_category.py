@@ -1,5 +1,10 @@
+from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from typing import Self, Optional, Any
+
+from primary.adspower._api_entity import _APIEntity
+from primary.adspower.types import CategoryInfo
 
 
 class _BaseCategory(_APIEntity, ABC):

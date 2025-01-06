@@ -3,10 +3,10 @@ from typing import Optional, ContextManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.webdriver import WebDriver
-from adspower.sync_api._base_profile import _BaseProfile
-from adspower.sync_api.group import Group
-from adspower.sync_api.category import Category
-from adspower.types import IpChecker
+from  primary.adspower.sync_api._base_profile import _BaseProfile
+from  primary.adspower.sync_api.group import Group
+from  primary.adspower.sync_api.category import Category
+from  primary.adspower.types import IpChecker
 
 
 class Profile(_BaseProfile):

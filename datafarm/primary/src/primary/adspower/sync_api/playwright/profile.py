@@ -1,8 +1,8 @@
 from datetime import datetime
 from typing import Optional, ContextManager
-from adspower.sync_api._base_profile import _BaseProfile
-from adspower.sync_api.group import Group
-from adspower.sync_api.category import Category
+from  primary.adspower.sync_api._base_profile import _BaseProfile
+from  primary.adspower.sync_api.group import Group
+from  primary.adspower.sync_api.category import Category
 from playwright.sync_api import sync_playwright, BrowserContext, Playwright, Browser
 from adspower.types import IpChecker
 

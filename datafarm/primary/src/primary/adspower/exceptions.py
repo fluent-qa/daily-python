@@ -1,7 +1,7 @@
 from typing import Any
 from httpx import ConnectError, RequestError, Request
 
-from adspower import ProxyConfig
+from  primary.adspower import ProxyConfig
 
 
 class ZeroResponseError(RequestError):

@@ -3,7 +3,7 @@ name = "pyway"
 version = "0.1.0"
 description = "Personal Python Collections"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10, <3.13"
 dependencies = []
 
 [project.scripts]

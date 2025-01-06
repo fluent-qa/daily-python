@@ -6,7 +6,7 @@ from httpx._client import UseClientDefault
 from httpx._types import (URLTypes, RequestContent, RequestData, RequestFiles, QueryParamTypes, HeaderTypes,
                           CookieTypes,
                           AuthTypes, TimeoutTypes, RequestExtensions)
-from adspower.exceptions import InvalidPortError, InternalAPIError, ExceededQPSError, APIRefusedError, ZeroResponseError
+from  primary.adspower.exceptions import InvalidPortError, InternalAPIError, ExceededQPSError, APIRefusedError, ZeroResponseError
 
 
 class _BaseHTTPClient(ABC):

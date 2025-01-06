@@ -4,10 +4,10 @@ from abc import ABC, abstractmethod
 from .category import Category
 from .http_client import HTTPClient
 from .group import Group
-from adspower._base_profile_api import _BaseProfileAPI
-from adspower.types import (ProxyConfig, Cookies, FingerprintConfig, RepeatConfigType, BrowserResponse,
+from  primary.adspower._base_profile_api import _BaseProfileAPI
+from  primary.adspower.types import (ProxyConfig, Cookies, FingerprintConfig, RepeatConfigType, BrowserResponse,
                             UserSort, IpChecker)
-from adspower.utils import _convert_json
+from  primary.adspower.utils import _convert_json
 
 
 class ProfileAPI(_BaseProfileAPI, ABC):

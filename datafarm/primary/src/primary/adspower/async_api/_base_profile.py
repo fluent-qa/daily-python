@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Optional, AsyncContextManager
-from adspower.async_api import ProfileAPI, Group
+from  primary.adspower.async_api import ProfileAPI, Group
 from contextlib import asynccontextmanager
 
 
