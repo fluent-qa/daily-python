@@ -34,6 +34,10 @@ dependencies = [
     "box>=0.1.5",
     "pytest>=8.3.4",
     "lxml>=5.3.0",
+    "jupyterhub>=5.2.1",
+    "jupyterlab>=4.3.4",
+    "notebook>=7.3.2",
+    "streamlit>=1.41.1",
 ]
 
 [project.optional-dependencies]

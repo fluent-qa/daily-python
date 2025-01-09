@@ -2,6 +2,10 @@
 
 prompt, llm, agent
 
+## UI Build
+
+- [streamlit-shadcn-ui](https://github.com/ObservedObserver/streamlit-shadcn-ui)
+
 
 ## Promptfoo
 

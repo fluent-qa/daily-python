@@ -82,6 +82,7 @@ async def main():
     readme_path = os.path.join(current_date, 'PROXIES.md')
     if not os.path.exists(readme_path):
         with open(readme_path, 'w') as readme_file:
+
             readme_file.write("# 验证通过的代理列表\n\n")
 
     async with aiohttp.ClientSession() as session:
