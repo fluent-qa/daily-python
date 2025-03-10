@@ -29,3 +29,7 @@ shared
 ├── qpyhelper: helper project to capture api request
 └── qpystructs: structures project
 ```
+
+## Agent
+
+Crew only works for python3.11 right now.

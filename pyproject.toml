@@ -3,7 +3,7 @@ name = "pyway"
 version = "0.1.0"
 description = "Personal Python Collections"
 readme = "README.md"
-requires-python = ">=3.10, <3.13"
+requires-python = ">3.10, <3.13"
 dependencies = []
 
 [project.scripts]
@@ -14,4 +14,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv.workspace]
-members = ["agents/*", "datafarm/*", "appkits/*"]
+members = ["agents/*", "datafarm/*", "appkits/*", "shared/qpyapp"]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qpyway"]
