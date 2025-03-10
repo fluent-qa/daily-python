@@ -1,0 +1,3423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+		<script src="https://g.alicdn.com/AWSC/uab/1.140.0/collina.js" id="AWSC_uabModule"></script><script src="https://g.alicdn.com/AWSC/WebUMID/1.93.0/um.js" id="AWSC_umidPCModule"></script><script src="https://g.alicdn.com/AWSC/et/1.82.2/et_f.js" id="AWSC_etModule"></script><script src="//g.alicdn.com/sd/nvc/1.1.156/nvc.js"></script><script src="https://hm.baidu.com/hm.js?cc6a63a887a7d811c92b7cc41c441837"></script><script type="text/javascript" async="" charset="utf-8" src="//w.cnzz.com/c.php?id=1574657&amp;async=1"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="https://js.tgb.cn/res/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//js.tgb.cn/res/js/json/jsonlint_json.min.ea208c19.js" src="//js.tgb.cn/res/js/json/jsonlint_json.min.ea208c19.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//js.tgb.cn/res/js/tgbgg/index_tgbgg.min.3da9f914.js" src="//js.tgb.cn/res/js/tgbgg/index_tgbgg.min.3da9f914.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//js.tgb.cn/res/js/report/report_report.min.ff6bd957.js" src="//js.tgb.cn/res/js/report/report_report.min.ff6bd957.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="//js.tgb.cn/js/jquery-1.9.1.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//js.tgb.cn/res/js/ajax.min.45aecdbd.js" src="//js.tgb.cn/res/js/ajax.min.45aecdbd.js"></script><base href="https://www.tgb.cn/">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>等主人的猫_最新主帖_博客_淘股吧</title>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="keywords" content="等主人的猫,博客,淘股吧">
+		<meta http-equiv="description" content="等主人的猫_博客_淘股吧">
+		<link rel="stylesheet" type="text/css" href="//css.tgb.cn/css/blog/blog.css">
+		<script src="//cf.aliyun.com/nvc/nvcPrepare.jsonp?a=%7B%22a%22%3A%22FFFF0N00000000008F3B%22%2C%22d%22%3A%22nvc_register%22%2C%22c%22%3A%221739961767219%3A0.6743915619283221%22%7D&amp;callback=jsonp_00501467730226246"></script><script src="/user/blog/getCss?userID=2368012" language="javascript" charset="UTF-8"></script><link rel="stylesheet" type="text/css" href="https://css.tgb.cn/v1/css/blog/default.css">
+		<script type="text/javascript" src="//js.tgb.cn/js/jquery/jquery.js"></script>
+	 	<script type="text/javascript" src="//js.tgb.cn/js/jquery/jquery.alerts.js"></script>
+		<script language="Javascript" src="//js.tgb.cn/js/xmlhttp-jq.js"></script>
+		<script type="text/javascript" src="//js.tgb.cn/js/cnzz_util.js"></script>
+
+
+		<script language="javascript" src="//js.tgb.cn/js/blog/blog.js"></script>
+
+		<script language="javascript" type="text/javascript">
+		// add huangdong  20140723
+		$(document).ready(function () {
+			$(".menubar a").click(function () {
+				rec(this, '个人微博');
+			});
+			getDav("2368012");
+			getCourse("2368012");
+		});
+
+		String.prototype.trim = function(){
+			return this.replace(/(^\s*)|(\s*$)/g, "");
+		}
+		function gotoPage(pageNo){
+			pageNo = parseInt(pageNo.trim());
+			if(pageNo == '' || isNaN(pageNo) || pageNo < 1 || pageNo > 2){
+    			showAlert("请输入正确页码");
+    			return;
+    		}
+    		var frm = document.forms["nameFrm"];
+    		frm.pageNo.value = pageNo;
+    		frm.action = "user/blog/moreTopic";
+    		frm.submit();
+       }
+	   function allCheck(){
+		   for(var i=0;i<document.main.elements.length;i++){
+		       if(document.main.elements[i].type == 'checkbox'){
+		        document.main.elements[i].checked=true;
+		        getKeyWordStr(document.main.elements[i],'deleteData');
+
+		     }
+		   }
+		}
+
+		function revCheck() {
+			for (var i = 0; i < document.main.elements.length; i++) {
+				if (document.main.elements[i].type == 'checkbox') {
+					document.main.elements[i].checked = !document.main.elements[i].checked;
+				}
+			}
+			document.getElementById('deleteData').value = "";
+		}
+
+		function getKeyWordStr(obj,hid_obj){
+		 var boxValue = document.getElementById(hid_obj).value;
+		 		if(obj.checked){
+		 			boxValue = boxValue+obj.value + " ";
+				}
+				else{
+					var re = new RegExp(obj.value+" ","g");
+					boxValue = boxValue.replace(re,"");
+			}
+		 	//	alert(boxValue);
+			document.getElementById(hid_obj).value=boxValue;
+		}
+
+		function favoriteTopic() {
+			var deleteData = document.getElementById('deleteData').value;
+			if (deleteData == "") {
+				showAlert("请先选择要收藏的帖子");
+			} else {
+				confirm("确定吗?", function (flag) {
+					if (flag == true) {
+						var url = "collect/addCollection?strfavID=" + deleteData;
+						XMLHttp.sendReq("get", url, "", function(obj){
+							var insertFlag = obj.dto.root;
+							var existValue = insertFlag.key;
+							if(existValue == 0){
+								showAlert("操作失败!");
+							}else{
+								showAlert("操作成功!",function(){
+									//gio收藏成功 -- start
+									var colDatas = deleteData.trim().split(" ");
+									if(colDatas.length > 0){
+										var topicData0 = colDatas[0].split("_");
+										var userID = topicData0[1];
+										gioCollectSuccess(0, userID, colDatas);
+									}
+									//gio收藏成功 -- end
+									window.location.reload();
+								});
+							}
+						});
+					}
+				});
+			}
+
+		}
+
+		function getReturnAddfav(obj){
+			console.log(obj);
+			return;
+	    		  var insertFlag = obj.dto.root;
+				  var existValue = insertFlag.key;
+				  if(existValue == 0){
+				          showAlert("操作失败!");
+				        }else{
+				          showAlert("操作成功!",function(){
+				        	window.location.reload();
+				          });
+
+				  }
+	    }
+
+
+
+		</script>
+	<style>
+
+	#headpic{
+	background:none !important;
+	}
+
+	.H2BG{
+	width:100%;
+	height:180px;
+	position:absolute;
+	background-image:url(https://js.tgb.cn/res/images/hu0.jpg);
+	top:46px;
+	left:0px;
+	}
+	.menubar{
+	position:relative;
+	z-index:10;
+	bottom:0px;
+	}
+	.allcontent{
+	position:relative;
+	z-index:10;
+	margin-top:90px;
+	}
+	.headList{
+	margin-top:70px;
+	}
+	.Headoption{
+	background:none!important;
+	font-size:14px;
+	text-align:center;
+	margin-right:30px !important;
+	border:none!important;
+	}
+	#dav li{
+	background:none!important;
+	border:none!important;
+	}
+	#course li{
+	background:none!important;
+	border:none!important;
+	}
+	.Headoption a{
+	color:white !important;
+	}
+	.ON{
+		width: 55px;
+		height: 3px;
+		background-color: #f79000;
+		margin: 5px 0px 5px 2px;
+	}
+	body{
+		background:none;
+		background-color:#f2f4f2;
+	}
+	</style><script type="text/javascript" src="https://js.tgb.cn/js/jquery/jquery.alerts.js"></script><script type="text/javascript" src="https://js.tgb.cn/js/jquery/jquery.alerts.js"></script></head>
+
+	<body>
+		<div id="wrap_container">
+
+
+
+
+
+<style>
+body div{font-size:12px;}
+label{cursor:pointer;}
+#interactshow2{border:1px #F0C36D solid;background:#FFFAAE;position:absolute;margin-top:22px;z-index:1001;}
+#kkk{
+	font-size:13px;
+}
+.tgb_top02 span {
+font-size:13px;
+color: black;
+}
+.tgb_top02 a:hover {
+background: #FFFAAE;
+}
+#searchKey{
+border:3px solid #f2f2f2;
+display:inline-block;
+width:283px;
+height:30px;
+line-height:30px;
+position:absolute;
+margin-left:15px;
+border-radius:5px;
+color:#ccc;
+}
+
+#Sbtn{
+display:inline-block;
+ width:70px;
+ height:36px;
+ text-align:center;
+ border-radius:5px;
+ background-color:#4793F1;
+ cursor:pointer;
+ position:relative;
+ left:298px;
+
+}
+#Sbtn img{
+width:28px;
+height:28px;
+margin-top:4px;
+}
+a{
+text-decoration:none !important;
+}
+	/**鑲＄エ**/
+	.stock{position:absolute;left:3px;top:3px;background:#fff;width:294px;height:86px;text-align:left;zoom:1;}
+	.searchTitle{font-weight:bold;font-size:18px;background:#0055a2;width:285px;height:35px;line-height:35px;text-align:left;color:#fff;margin:5px 5px 0px;}
+	.searchTitle a{float:right;width:20px;text-align:center;font-weight:bold;cursor:pointer;}
+	.searchInput{width:227px;height:35px;*height:30px;margin-top:3px;font-size:16px;line-height:35px;*line-height:30px;margin-left:3px;}
+	.stockbutton{display:inline-block;width:50px;height:33px;color:#FFF;font-weight:bold;background:#0055a2;text-decoration:none;line-height:32px;text-align:center;vertical-align:top;margin-top:4px;}
+	.stockbutton:hover,.searchTitle a:hover{
+		background-color: #0569c4;
+		background-image: -moz-linear-gradient(top,#0977da,#0055a2);
+		background-image: -ms-linear-gradient(top,#0977da,#0055a2);
+		background-image: -webkit-gradient(linear,0 0,0 100%,from(#0977da),to(#0055a2));
+		background-image: -webkit-linear-gradient(top,#0977da,#0055a2);
+		background-image: -o-linear-gradient(top,#0977da,#0055a2);
+		background-image: linear-gradient(top,#0977da,#0055a2);
+		background-repeat: repeat-x;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0977da',endColorstr='#0055a2',GradientType=0);
+ 	}
+ol, ul {list-style: none;margin:0px;padding:0px;}
+.clear{clear:both;}
+#stock_suggest{
+	font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
+ 	padding: 3px;
+ 	border-top:0px;
+ 	border: 1px solid #ccc;
+ 	border: 1px solid rgba(0,0,0,0.2);
+ 	display: block;
+ 	position: absolute;
+ 	background-color: #fff;
+ 	margin-left:3px;
+ 	text-align:left;
+ 	width:275px;		//275px(鍏ㄩ儴)
+}
+#stock_suggest ul {
+	padding-top: 3px;
+	text-align:left;
+}
+#stock_suggest li.selected {
+	background-color: #eee;
+	cursor: pointer;
+}
+#stock_suggest li {
+	padding: 2px 12px 3px;
+}
+.loading{background:url('https://css.tgb.cn/images/Load.gif') 50% no-repeat;width:100%;height:40px;}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=0.1">
+<script type="text/javascript" src="//js.tgb.cn/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="//js.tgb.cn/js/dom-drag.js"></script>
+<script type="text/javascript" src="//js.tgb.cn/js/createBlogTip.js"></script>
+<script type="text/javascript" src="//js.tgb.cn/js/cnzz_util.js"></script>
+<script type="text/javascript" src="//js.tgb.cn/js/store-min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://css.tgb.cn/css/NArticle.css">
+<script type="text/javascript" src="https://js.tgb.cn/js/gio/commongio.js"></script>
+<script type="text/javascript" src="https://js.tgb.cn/res/config.js"></script>
+<script type="text/javascript" src="//js.tgb.cn/js/msgcount_util.js"></script>
+<script src="//js.tgb.cn/js/xdomain.min.js" slave="//js.tgb.cn/res/xdomainProxy.html"></script>
+
+ <script src="//g.alicdn.com/sd/nvc/1.1.112/guide.js"></script>
+<link rel="stylesheet" type="text/css" href="https://css.tgb.cn/res/css/header/redPoint_header.min.45a6b7f2.css">
+<script src="https://js.tgb.cn/res/lib/gio.js"></script>
+<script type="text/javascript" src="https://js.tgb.cn/res/libs/require.min.js" data-main="https://js.tgb.cn/res/main.js"></script>
+<div style="width:100%;height:46px;background-color:white;position:absolute;left:0px;"></div>
+<div id="topbar" style="width:960px;position:relative;padding:5px 0px;height:36px;line-height:36px;font-size:14px;background-color:white;">
+     <img alt="" class="left" src="https://js.tgb.cn/res/images/hu4.png" style="width:27px;height:36px;margin:0px 8px;">
+ 	<span class="left">
+ 	<a href="https://www.tgb.cn/" style="color:#FF9900;margin:0px 10px 0px 5px;">淘股吧</a>
+ 	<b style="color:#333333;display: none;">blogerName</b>
+ 	<span style="color:#999;display:inline-block;margin-left:10px;">个人博客</span>
+ 	</span>
+ 		<form action="search/search" method="get" target="_blank" id="searchFormFirst" style="position:relative;height:36px;float:left;">
+ 		  <input name="searchContent" onfocus="if(this.value=='请输入个股代码或个股名称'){this.value='';}if(this.value != ''&amp;&amp;this.value!='搜索 股票/讨论/用户'){$('#stock_suggest').show();}" onclick="addKeyUp(this);" autocomplete="off" placeholder="请输入个股代码或个股名称" value="请输入个股代码或个股名称" type="text" id="searchKey" style="font-size:12px;width:283px;" size="80" maxlength="60" onkeypress="attachInputEvent(event,this)">
+ 		  <span class="r1"></span>
+ 		  <span id="Sbtn"><img src="https://js.tgb.cn/res/images/hu17.png" alt=""></span>
+			<input type="hidden" name="type" value="2">
+ 		  </form>
+ 		  <div class="right">
+
+		 <div class="right logined" style="font-size:14px;">
+
+		<span style="color:#999;">欢迎您!</span><b style="color:#333;display:inline-block;margin:0px 15px;">damnpa</b>
+		<a href="user/getSelfInfo" target="_blank" style="color:#4793F1;font-weight:700;margin-right:20px;">个人中心</a>
+
+
+			<a href="https://sso.tgb.cn/web/logout/index" style="color:#999;font-weight:700;margin-right:5px;">退出</a>
+
+					  <input type="hidden" value="11668870" id="userID">
+					<div id="interactshow2" style="display: none;">
+						<div style="color:#333;"><a id="closeTip" href="javascript:clearNum(&quot;interactshow2&quot;)">X</a></div>
+					</div>
+		</div>
+			  <div class="left XLD_num2" data-open="false" style="display:none;"></div>
+
+		  	</div>
+
+			<script type="text/javascript">
+				var loginUserID = 11668870;
+				//初始化gio -- start
+				gdp('init', gioAccountID, gioDatasourceID, {
+					host: gioHost,
+					version: gioVersion,
+					enableIdMapping: true,
+					autotrack: false
+				});
+				gdp('send');
+				gdp('setUserId', loginUserID);
+				//初始化gio -- end
+			if (window != window.top) {
+				var obj_xml_http;
+				if (window.XMLHttpRequest) {
+			         obj_xml_http = new XMLHttpRequest();
+			    }else{
+			      	 obj_xml_http = new ActiveXObject("Microsoft.XMLHTTP");
+			    }
+
+				//  var url= "addClickSum?adID="+10000+"&remark="+window.location.pathname+"&randnum="+Math.random();obj_xml_http.open("get",url,true);
+				// obj_xml_http.send("");
+				//  setTimeout(function(){
+				// 	 window.top.location = window.self.location;
+				// 	},200);
+
+			}
+			document.getElementById("Sbtn").onclick=function(){
+				document.getElementById("searchFormFirst").submit();
+			}
+
+				function checkSearch(){
+					document.getElementById("searchKey").style.color="#333;"
+					var searchValue=document.getElementById("searchKey").value;
+					if(searchValue==""||searchValue=="请输入个股代码或个股名称"||searchValue=="请输入帖子标题或报告标题"||searchValue=="请输作者或研究员"||searchValue=="请输入感兴趣的话题,如:“房地产”"){
+
+						showAlert("请输入内容");
+						return;
+					}//选择按作者查询
+					else if(document.getElementById("selectType").value=="1"||document.getElementById("selectType").value=="3"){
+						if(/^[\u4e00-\u9fa5]+$/.test(searchValue) && searchValue.length<1){
+							showAlert("输入的条件过短，最少1个汉字");
+							return;
+						}else if(/^\w+$/.test(searchValue) && searchValue.length<2){
+							showAlert("输入的条件过短，最少2个英文字母");
+							return;
+						}else{
+							document.getElementById("searchFormFirst").submit();
+						}
+						document.getElementById("searchKey").style.color="#333;"
+					}
+					//按其他方式查询
+					else if(searchValue.length<2){
+							showAlert("输入的条件过短，最少2个英文字母或者两个汉字");
+							return;
+							document.getElementById("searchKey").style.color="#333;"
+					}
+					else{
+						document.getElementById("searchFormFirst").submit();
+						document.getElementById("searchKey").style.color="#333;"
+					}
+				}
+				</script>
+			<script type="text/javascript">
+				var currentsearchKey = [];
+				var radioAlt = ["请输入帖子标题或报告标题","请输作者或研究员","请输入个股代码或个股名称","请输入感兴趣的话题,如:“房地产”"];
+				function attachRadioEvent(){
+					var doI = getSelectedData("selectType");
+					if(!doI)var doI = 0;
+					var objs = document.getElementsByName("type");
+					var searchKey = document.getElementById("searchKey");
+					for(var i = 0 ; i < radioAlt.length ;i++){
+						if(searchKey.value == radioAlt[i]){
+							searchKey.value = radioAlt[doI];
+						}else if(searchKey.value =="") {
+							searchKey.value = radioAlt[doI];
+						}
+					}
+				}
+				 function getSelectedData(selectObj){
+			      var selectValue;
+				  var selectOne=document.getElementById(selectObj);
+				  var length=selectOne.options.length;
+				  for(var i=0;i<length;i++){
+					  	  if(i == selectOne.selectedIndex){
+					  	  selectOne.options[selectOne.selectedIndex].value;
+					  	  selectValue=selectOne.options[selectOne.selectedIndex].value;
+				  	   }
+				  	 }
+				 	 return selectValue;
+				   }
+				function attachSearch(obj){
+					if(!obj)return;
+					try{
+						for(var i = 0 ; i < radioAlt.length;i++){
+							if(obj.value == radioAlt[i]){
+								obj.value ="";
+							}
+						}
+					}catch(e){}
+				}
+				function attachInputEvent(evt,obj){
+
+
+					if(!evt)evt=window.event;
+					if(evt.keyCode == 13){
+						tosub();
+					}
+				}
+
+				function addClick(ID,remark){
+					var obj_xml_http;
+					if (window.XMLHttpRequest) {
+				         obj_xml_http = new XMLHttpRequest();
+				    }else{
+				      	 obj_xml_http = new ActiveXObject("Microsoft.XMLHTTP");
+				    }
+				    if(remark == null){
+						remark="";
+				    }
+				    // var url= "addClickSum?adID="+ID+"&remark="+remark+"&randnum="+Math.random();
+					// obj_xml_http.open("get",url,true);
+					// obj_xml_http.send("");
+				}
+			</script>
+
+
+</div>
+
+<script type="text/javascript">
+requirejs([minConfig.jsonlint_json], function(jsonlint_json){});
+//设置 小黄签 获取数据 定时器
+//	setInterval("getBlogMsg()",1000*60);//1秒＊60 ＝1分钟
+
+	(function(window,$){
+		var $suggestDiv;						//随笔提示框
+		var $stockul;							//个股提示ul对象
+		var $input;
+		var isSearch = true;					//是否开始搜索的开关
+		var isSearchTheme = true;
+		var isSearchUser = true;
+		var stockArray = [];					//搜索结果容器
+		var tagsArray = [];
+		var userArray = [];
+		var stockbutton = null;
+		var weiboEdit_stock_url = document.domain;	//匹配资源加载域名
+			if(weiboEdit_stock_url.indexOf("www") == -1){
+				weiboEdit_stock_url = "www."+weiboEdit_stock_url;
+			}
+
+		document.onclick = function(e) {
+			e = window.event || e; // 兼容IE7
+			obj = $(e.srcElement || e.target);
+			if(obj.attr("id")!='stock_suggest'&&obj.attr("id")!='searchKey'){
+				if($suggestDiv&&$suggestDiv.is(":visible")){
+					$suggestDiv.hide();
+					return;
+				}
+			}
+		}
+
+		window.addKeyUp = function(obj){
+			if(!$input){
+				$input = $(obj);
+			}
+			if(!$suggestDiv){						//如果没有建议框就创建一个
+				$suggestDiv = $('<div id="stock_suggest" style="width:210px;z-index:1200;margin-left:20px;"><ul></ul></div>').hide().appendTo($input.parent()).on("mouseover", "li",
+		        function(ev) {
+		            $(ev.target).siblings().removeClass("selected").end().addClass("selected");
+		        });
+			}
+			$stockul = $suggestDiv.find('>ul');
+			$input.unbind('propertychange paste input keydown');
+			var searchTime="";
+			$input.bind('propertychange paste input keydown',function(ev){
+				var keyCode = ev.keyCode || ev.which;
+				if(keyCode!=40&&keyCode!=38&&keyCode!=13){
+					var inputStr = $input.val();				//获取输入信息
+					if(inputStr==''){$suggestDiv.hide();return;}
+					inputStr = inputStr.replace(/(^\s*)|(\s*$)/g, "");
+					var htmlStr = '<strong>包含"'+inputStr+'"的标题</strong><a target="_blank" href="search/search?searchContent='+encodeURIComponent(inputStr)+'&type=0"><li>'+inputStr+'</li></a>';
+					htmlStr += '<strong>包含"'+inputStr+'"的作者</strong><a target="_blank" href="search/search?searchContent='+encodeURIComponent(inputStr)+'&type=1"><li>'+inputStr+'</li></a>';
+					 htmlStr +='<strong>包含"'+inputStr+'"的主题</strong><a target="_blank" href="search/search?searchContent='+encodeURIComponent(inputStr)+'&type=3"><li>'+inputStr+'</li></a>'
+					if(/^\d{0,3}$/ig.test(inputStr)||/^\d{7,}$/ig.test(inputStr)){	//股票代码>=4位才开始查询
+						isSearch = false;
+						if(inputStr.length<4||inputStr.length>6){
+							$stockul.empty().html(htmlStr);
+						}
+						$suggestDiv.show();
+						return;
+					}else{
+						isSearch = true;
+					}
+					if(isSearch){		//开始搜索
+						$stockul.empty().html('<li class="stockLoading">查询中...</li>').show();
+						var url = "https://"+weiboEdit_stock_url+"/search/newQuick?s="+inputStr+"&searchTime="+new Date().getTime()+"&callback=?";		//跨域请求
+						$.getJSON(url,function(data){
+							if(data.status==false){
+								showAlert(data.errorMessage);
+								return;
+							}
+							if(searchTime=="" ||searchTime<=parseInt(data.dto.searchTime)){
+								searchTime=parseInt(data.dto.searchTime);
+							}else return;
+							stockArray = data.dto.stock;
+							tagsArray = data.dto.tags;
+							userArray = data.dto.user;
+							if(stockArray[0]==null && tagsArray[0]==null && userArray[0]==null){
+								$stockul.empty().html(htmlStr);
+								$suggestDiv.show();
+								return;
+							}else{
+								var listr='';
+								if(stockArray[0]!=null){
+									listr='<strong>股票</strong>';
+									for(var i=0,stockInfo;i<stockArray.length && i<3;i++){
+										stockInfo = stockArray[i];
+										for(var key in stockInfo ){
+											listr +="<li" + (i==0 ? ' class="selected"': ' class=""' ) + "><a onclick='gioSearch(1,\""+stockInfo[key]+"\",\""+key+"\",\"\")' target='_blank' >"+stockInfo[key]+"("+key+")</a></li>";
+										}
+									}
+								}
+								var listr1='';
+								if(tagsArray[0]!=null){
+									listr1='<strong>主题</strong>';
+									for(var i=0,tagsInfo;i<tagsArray.length && i<3;i++){
+										tagsInfo = tagsArray[i];
+										for(var value in tagsInfo ){
+											var arr = value.split('_');
+											var key = arr[0];
+											var code = arr[1];
+											if(code==''){
+												listr1 +="<li" + (i==0 ? ' class="selected"': ' class=""' ) + "><a href='https://www.tgb.cn/keybar?keywordID="+key+"' target='_blank' >"+tagsInfo[value]+"</a></li>";
+											}else{
+												listr1 +="<li" + (i==0 ? ' class="selected"': ' class=""' ) + "><a href='https://www.tgb.cn/getTlMoreStock?keywordID="+key+"' target='_blank' >"+tagsInfo[value]+"</a></li>";
+											}
+
+										}
+									}
+								}
+								var listr2='';
+								if(userArray[0]!=null){
+									listr2='<strong>用户</strong>';
+									for(var i=0,userInfo;i<userArray.length && i<3;i++){
+										userInfo = userArray[i];
+										for(var key in userInfo ){
+											listr2 +="<li" + (i==0 ? ' class="selected"': ' class=""' ) + "><a  data-extra=\'"+key+"\' onclick='gioSearch(2,\""+userInfo[key]+"\",\""+key+"\",\"https://www.tgb.cn/\")' target='_blank'  >"+userInfo[key]+"</a></li>";
+										}
+									}
+								}
+
+								listr+=listr1+listr2+htmlStr;
+
+								$stockul.empty().html(listr);
+								$("li", $suggestDiv).removeClass("selected");
+								 $("li", $suggestDiv).removeClass("selected").eq(0).addClass("selected");
+								$suggestDiv.show().data('atSelect',atSelect);
+							}
+						});
+					}
+				}
+				//监听上下移动及回车事件
+				if(keyCode == 40){			//向下
+					if ($suggestDiv.is(":visible")){
+		                $next = $("li.selected", $suggestDiv).next();
+		                if ($next.length) {
+		                    $("li", $suggestDiv).removeClass("selected");		//全部的li样式
+		                    if($next[0].nodeName=='STRONG'){
+		                    	$next.next().addClass("selected");
+		                    }else{
+		                    	$next.addClass("selected");
+		                    }
+		                } else {
+		                    $("li", $suggestDiv).removeClass("selected").eq(0).addClass("selected");
+		                }
+		                ev.preventDefault ? ev.preventDefault() : ev.returnValue = false;
+		            }
+				}
+				if(keyCode == 38){			//向上
+					if ($suggestDiv.is(":visible")) {
+		                $prev = $("li.selected", $suggestDiv).prev();
+		                if ($prev.length) {
+		                    $("li", $suggestDiv).removeClass("selected");
+		                    if($prev[0].nodeName=='STRONG'){
+		                    	$prev1 = $prev.prev();
+		                    	if($prev1.length){
+		                    		$prev1.addClass("selected");
+		                    	}else{
+		                    		$("li", $suggestDiv).removeClass("selected").eq(-1).addClass("selected");
+		                    	}
+		                    }else{
+		                    	$prev.addClass("selected");
+		                    }
+		                } else {
+		                    $("li", $suggestDiv).removeClass("selected").eq(-1).addClass("selected");
+		                }
+		                ev.preventDefault ? ev.preventDefault() : ev.returnValue = false;
+		            }
+				}
+				if(keyCode == 13){			//回车
+		            ev.preventDefault ? ev.preventDefault() : ev.returnValue = false;
+		            if ($suggestDiv.is(":visible")) {
+		                atSelect();
+		            }
+				}
+			});
+			//选择某个个股
+			function atSelect(){
+				if(document.all&&typeof(document.all)=="object"){   //IE
+					 $("li.selected a")[0].click();
+				 }else{
+					var e = document.createEvent('MouseEvent');
+					e.initEvent('click',false,true);
+					$("li.selected a")[0].dispatchEvent(e);
+				 }
+			}
+		addKeyUp.search=function(){
+				if($input.val()==''||$input.val()=='搜索 股票/标题/作者/主题'){
+					return false;
+				}
+				window.open('/search/search?searchContent='+encodeURIComponent($input.val())+'&type=2');
+			}
+		 }
+	 })(window,jQuery);
+</script>
+<iframe id="crossDomainIfr" style="display: none;"></iframe>
+
+		<div id="headpic">
+			<div class="H2BG"></div>
+
+			<div class="menubar">
+			<h1 style="color:white;margin:25px 0px 5px 0px;">等主人的猫的博客</h1>
+			<a href="/blog/2368012" target="_blank" style="color:white;font-size:14px;">https://www.tgb.cn/blog/2368012</a>
+				<ul class="headList">
+					<li class="Headoption"><a href="blog/2368012">博客首页</a></li>
+					<li class="on Headoption"><a rel="external nofollow" href="user/blog/moreTopic?userID=2368012">最新主帖</a><div class="ON"></div> </li>
+					<li class="Headoption"><a rel="external nofollow" href="user/blog/moreReplyMod?userID=2368012">最新跟帖</a> </li>
+				 	<li class="Headoption" id="dav" style="display:none;"></li>
+					<li class="Headoption"><a href="/user/blog/toLiveTrends?userID=2368012">直播动态</a> </li>
+					<li class="Headoption"><a rel="external nofollow" href="https://shuo.tgb.cn//shuo/toBlogShuo?userID=2368012">我的说说</a> </li>
+					<li class="Headoption"><a href="/new/nrnt/contestAttended?userID=2368012">研股</a> </li>
+					<li class="Headoption" id="course" style="display:none;"></li>
+
+					<li class="Headoption"><a href="/user/blog/myspmath?userID=2368012">实盘比赛</a> </li>
+
+				</ul>
+			</div>
+		</div>
+		<form name="nameFrm">
+			<input type="hidden" name="pageNum" value="2">
+			<input type="hidden" name="pageNo" value="1">
+			<input type="hidden" name="sortFlag" value="T">
+			<input type="hidden" name="userID" value="2368012">
+		</form>
+		<div class="bolg-bread">
+			<a href="/user/blog/moreTopic?userID=2368012" target="_self">
+				<span class="bolg-bread-btn bolg-bread-btn-active">全部主帖</span>
+			</a>
+			<a href="/user/blog/blogbest?userID=2368012" target="_self">
+				<span class="bolg-bread-btn">精华主帖</span>
+			</a>
+			<a href="/user/blog/bloguseful?userID=2368012" target="_self">
+				<span class="bolg-bread-btn">推荐主帖</span>
+			</a>
+		</div>
+		<table width="960px">
+			<tbody><tr>
+				<td height="30px">
+					<table width="100%">
+						<tbody><tr class="oper_span">
+							<td width="820px" align="right" style="padding-right:15px;">
+								<span><a href="javascript:gotoPage('1');">刷新</a>
+								</span>|1/2|
+
+
+
+									<span>首页</span>|<span>上页</span>|
+
+
+
+
+
+									<span><a href="javascript:gotoPage('2');">下页</a>
+									</span>|
+						<span><a href="javascript:gotoPage('2');">末页</a>
+									</span>|
+
+
+							<a href="user/blog/moreTopic?userID=2368012&amp;sortFlag=R">按最新时间</a>
+							</td>
+						</tr>
+
+					</tbody></table>
+				</td>
+			</tr>
+			<tr>
+				<td><form action="removeColection" name="main" method="post">
+					<input type="hidden" name="flag" value="0">
+					<table width="98%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="" class="T1" style="margin: auto; text-align: center; line-height: 30px;table-layout: fixed;">
+						<tbody><tr>
+							<th width="20"></th>
+							<th width="422">标 题</th>
+							<th width="90">笔 名</th>
+							<th width="80">最新时间</th>
+							<th width="105">回帖/浏览</th>
+							<th width="50">加油券</th>
+							<th width="45">赞</th>
+							<th width="98">发布日期</th>
+						</tr>
+						<tr>
+						<td colspan="8" align="left" class="table_bottom01" style="padding-left:15px;text-align:left;">
+							<span><a href="javascript:allCheck()">全选</a> </span>|
+								<span><a href="javascript:revCheck()">反选</a> </span>|
+								<span><a href="javascript:favoriteTopic();">批量加入收藏</a> </span>|
+
+						</td>
+						</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="6275290_2368012">
+										<input type="hidden" id="topic_6275290" username="等主人的猫" subject="20241013，史上最短牛市的后续">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/2cjts82YIZy" title="20241013，史上最短牛市的后续" target="_blank">20241013，史上最短牛市的后续</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1143)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-19 18:06</td>
+									<td>7624&nbsp;/&nbsp;170926</td>
+									<td>0</td>
+									<td>94</td>
+									<td>2024-10-13</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="6246749_2368012">
+										<input type="hidden" id="topic_6246749" username="等主人的猫" subject="20240929,牛市熊市都是一样的">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/2bWeZGDSi07" title="20240929,牛市熊市都是一样的" target="_blank">20240929,牛市熊市都是一样的</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1434)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-13 18:39</td>
+									<td>1423&nbsp;/&nbsp;33531</td>
+									<td>0</td>
+									<td>125</td>
+									<td>2024-09-29</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="6211596_2368012">
+										<input type="hidden" id="topic_6211596" username="等主人的猫" subject="20240914，建立正确逻辑观念，进而帮助交易">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/2bxcCRLsJHH" title="20240914，建立正确逻辑观念，进而帮助交易" target="_blank">20240914，建立正确逻辑观念，进而帮助交易</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2059)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-29 19:14</td>
+									<td>678&nbsp;/&nbsp;16492</td>
+									<td>0</td>
+									<td>37</td>
+									<td>2024-09-14</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="6068110_2368012">
+										<input type="hidden" id="topic_6068110" username="等主人的猫" subject="20240717，弱市短线交易随想">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/29Xod6dwBS9" title="20240717，弱市短线交易随想" target="_blank">20240717，弱市短线交易随想</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1133)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-14 20:00</td>
+									<td>2440&nbsp;/&nbsp;52665</td>
+									<td>0</td>
+									<td>54</td>
+									<td>2024-07-17</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="5933772_2368012">
+										<input type="hidden" id="topic_5933772" username="等主人的猫" subject="20240527,实事求是">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/28ACjvWeEjl" title="20240527,实事求是" target="_blank">20240527,实事求是</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1178)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>07-17 15:44</td>
+									<td>2956&nbsp;/&nbsp;58537</td>
+									<td>0</td>
+									<td>52</td>
+									<td>2024-05-27</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="5639863_2368012">
+										<input type="hidden" id="topic_5639863" username="等主人的猫" subject="20240217,回首来时路，叹往昔，敬畏未来">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/25VmrtPmuWI" title="20240217,回首来时路，叹往昔，敬畏未来" target="_blank">20240217,回首来时路，叹往昔，敬畏未来</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1292)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>05-27 10:55</td>
+									<td>3340&nbsp;/&nbsp;84891</td>
+									<td>0</td>
+									<td>70</td>
+									<td>2024-02-17</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="5537409_2368012">
+										<input type="hidden" id="topic_5537409" username="等主人的猫" subject="20240107，短线基础行情如何影响个股">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/24O3rehPcWv" title="20240107，短线基础行情如何影响个股" target="_blank">20240107，短线基础行情如何影响个股</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2078)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-18 07:45</td>
+									<td>2645&nbsp;/&nbsp;48502</td>
+									<td>0</td>
+									<td>51</td>
+									<td>2024-01-07</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="5244572_2368012">
+										<input type="hidden" id="topic_5244572" username="等主人的猫" subject="20230923，短线的人间荒唐。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/21ZIusToJzV" title="20230923，短线的人间荒唐。" target="_blank">20230923，短线的人间荒唐。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2770)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-07 21:39</td>
+									<td>4832&nbsp;/&nbsp;84059</td>
+									<td>0</td>
+									<td>99</td>
+									<td>2023-09-23</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="5180255_2368012">
+										<input type="hidden" id="topic_5180255" username="等主人的猫" subject="20230831,周一大跌是否量化的锅？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/21mulzOf8Yb" title="20230831,周一大跌是否量化的锅？" target="_blank">20230831,周一大跌是否量化的锅？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1337)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-25 09:11</td>
+									<td>1670&nbsp;/&nbsp;32048</td>
+									<td>0</td>
+									<td>47</td>
+									<td>2023-08-31</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="5147670_2368012">
+										<input type="hidden" id="topic_5147670" username="等主人的猫" subject="20230820，炒股的减法数学上成立吗？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/214VO67bBHd" title="20230820，炒股的减法数学上成立吗？" target="_blank">20230820，炒股的减法数学上成立吗？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1497)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-01 09:26</td>
+									<td>950&nbsp;/&nbsp;18825</td>
+									<td>0</td>
+									<td>40</td>
+									<td>2023-08-20</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4979171_2368012">
+										<input type="hidden" id="topic_4979171" username="等主人的猫" subject="20230617，机械纪元来临">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1Zn2UmelLMJ" title="20230617，机械纪元来临" target="_blank">20230617，机械纪元来临</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2832)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-25 15:23</td>
+									<td>3189&nbsp;/&nbsp;54417</td>
+									<td>0</td>
+									<td>72</td>
+									<td>2023-06-17</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4957846_2368012">
+										<input type="hidden" id="topic_4957846" username="等主人的猫" subject="20230609，聪明豆现象">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1Z9nRwyQGP1" title="20230609，聪明豆现象" target="_blank">20230609，聪明豆现象</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1211)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>06-16 16:14</td>
+									<td>132&nbsp;/&nbsp;4671</td>
+									<td>0</td>
+									<td>21</td>
+									<td>2023-06-09</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4604450_2368012">
+										<input type="hidden" id="topic_4604450" username="等主人的猫" subject="20230124，摒弃模糊，浅谈短线标准界定、数字化与基本规律-首发">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1VvuASpPpMr" title="20230124，摒弃模糊，浅谈短线标准界定、数字化与基本规律-首发" target="_blank">20230124，摒弃模糊，浅谈短线标准界定、数字化与基本规律-首发</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (5427)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-16 13:58</td>
+									<td>7478&nbsp;/&nbsp;118040</td>
+									<td>0</td>
+									<td>148</td>
+									<td>2023-01-24</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4588439_2368012">
+										<input type="hidden" id="topic_4588439" username="等主人的猫" subject="20230115，情绪周期是否可靠的思考">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/1Vgsye6eK36" title="20230115，情绪周期是否可靠的思考" target="_blank">20230115，情绪周期是否可靠的思考</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2610)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-02 07:11</td>
+									<td>300&nbsp;/&nbsp;8628</td>
+									<td>0</td>
+									<td>47</td>
+									<td>2023-01-15</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4498976_2368012">
+										<input type="hidden" id="topic_4498976" username="等主人的猫" subject="20221209，如何在大乱斗里躲飞刀">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1Uhj2QWA8gd" title="20221209，如何在大乱斗里躲飞刀" target="_blank">20221209，如何在大乱斗里躲飞刀</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1044)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-02 07:59</td>
+									<td>1431&nbsp;/&nbsp;28190</td>
+									<td>0</td>
+									<td>40</td>
+									<td>2022-12-09</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4419024_2368012">
+										<input type="hidden" id="topic_4419024" username="等主人的猫" subject="20221112，科学，文学，神学？谢谢！">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/1TyNYll8Q9y" title="20221112，科学，文学，神学？谢谢！" target="_blank">20221112，科学，文学，神学？谢谢！</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1251)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-09 17:31</td>
+									<td>1266&nbsp;/&nbsp;22675</td>
+									<td>0</td>
+									<td>55</td>
+									<td>2022-11-12</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4271881_2368012">
+										<input type="hidden" id="topic_4271881" username="等主人的猫" subject="20220911阿喵日记3-28内卷行情破局">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/1RTzMLjzgSk" title="20220911阿喵日记3-28内卷行情破局" target="_blank">20220911阿喵日记3-28内卷行情破局</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1956)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-23 14:34</td>
+									<td>3599&nbsp;/&nbsp;60312</td>
+									<td>0</td>
+									<td>66</td>
+									<td>2022-09-11</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4234328_2368012">
+										<input type="hidden" id="topic_4234328" username="等主人的猫" subject="20220829，阿喵日记2-内卷">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1RwsUcoLn5H" title="20220829，阿喵日记2-内卷" target="_blank">20220829，阿喵日记2-内卷</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1350)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-17 11:19</td>
+									<td>1213&nbsp;/&nbsp;21805</td>
+									<td>0</td>
+									<td>62</td>
+									<td>2022-08-28</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="4191523_2368012">
+										<input type="hidden" id="topic_4191523" username="等主人的猫" subject="20220813，阿喵日记1">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/1R7mD25lPib" title="20220813，阿喵日记1" target="_blank">20220813，阿喵日记1</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (731)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>08-28 18:31</td>
+									<td>822&nbsp;/&nbsp;16250</td>
+									<td>0</td>
+									<td>48</td>
+									<td>2022-08-13</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3994537_2368012">
+										<input type="hidden" id="topic_3994537" username="等主人的猫" subject="220611，风动旛动，市场风格在变">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1PqtcqkTuxv" title="220611，风动旛动，市场风格在变" target="_blank">220611，风动旛动，市场风格在变</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1766)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-05 10:50</td>
+									<td>3610&nbsp;/&nbsp;76215</td>
+									<td>0</td>
+									<td>83</td>
+									<td>2022-06-11</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3915381_2368012">
+										<input type="hidden" id="topic_3915381" username="等主人的猫" subject="220514，被高估的龙头战法">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1OG98J3umYk" title="220514，被高估的龙头战法" target="_blank">220514，被高估的龙头战法</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1748)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-26 11:32</td>
+									<td>2271&nbsp;/&nbsp;53822</td>
+									<td>0</td>
+									<td>97</td>
+									<td>2022-05-14</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3597974_2368012">
+										<input type="hidden" id="topic_3597974" username="等主人的猫" subject="220101，万物加速，1年后的TWINS">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1L7icYqJp8D" title="220101，万物加速，1年后的TWINS" target="_blank">220101，万物加速，1年后的TWINS</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1258)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-01 18:20</td>
+									<td>12431&nbsp;/&nbsp;244301</td>
+									<td>0</td>
+									<td>111</td>
+									<td>2022-01-01</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3533598_2368012">
+										<input type="hidden" id="topic_3533598" username="等主人的猫" subject="20211204，价值认可的看长做短">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1KmQkLjZoHJ" title="20211204，价值认可的看长做短" target="_blank">20211204，价值认可的看长做短</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1126)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-31 22:10</td>
+									<td>932&nbsp;/&nbsp;33716</td>
+									<td>0</td>
+									<td>27</td>
+									<td>2021-12-04</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3520545_2368012">
+										<input type="hidden" id="topic_3520545" username="等主人的猫" subject="211128，Omicron来了，有何影响？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1KcRecmB9Ww" title="211128，Omicron来了，有何影响？" target="_blank">211128，Omicron来了，有何影响？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (985)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-03 21:47</td>
+									<td>294&nbsp;/&nbsp;12472</td>
+									<td>0</td>
+									<td>13</td>
+									<td>2021-11-28</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3450729_2368012">
+										<input type="hidden" id="topic_3450729" username="等主人的猫" subject="211015&nbsp;周期股看周期，不要高仓健">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/1J2AIiwDoty" title="211015&nbsp;周期股看周期，不要高仓健" target="_blank">211015&nbsp;周期股看周期，不要高仓健</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1747)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>04-10 14:05</td>
+									<td>1483&nbsp;/&nbsp;61171</td>
+									<td>0</td>
+									<td>49</td>
+									<td>2021-10-15</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3437007_2368012">
+										<input type="hidden" id="topic_3437007" username="等主人的猫" subject="211006&nbsp;看到做不到，这铁棒有何用">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1INgOHBc2Nl" title="211006&nbsp;看到做不到，这铁棒有何用" target="_blank">211006&nbsp;看到做不到，这铁棒有何用</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1426)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-16 12:03</td>
+									<td>878&nbsp;/&nbsp;30266</td>
+									<td>0</td>
+									<td>39</td>
+									<td>2021-10-06</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3420004_2368012">
+										<input type="hidden" id="topic_3420004" username="等主人的猫" subject="20210919&nbsp;短线市场已经巨变">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1Ikzb5rbzfO" title="20210919&nbsp;短线市场已经巨变" target="_blank">20210919&nbsp;短线市场已经巨变</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (4615)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-14 18:46</td>
+									<td>1171&nbsp;/&nbsp;48291</td>
+									<td>0</td>
+									<td>189</td>
+									<td>2021-09-19</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3400013_2368012">
+										<input type="hidden" id="topic_3400013" username="等主人的猫" subject="210905，量化交易主导市场的思考">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1HXALu2VvWx" title="210905，量化交易主导市场的思考" target="_blank">210905，量化交易主导市场的思考</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (956)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-12 21:03</td>
+									<td>713&nbsp;/&nbsp;26082</td>
+									<td>0</td>
+									<td>18</td>
+									<td>2021-09-05</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3369546_2368012">
+										<input type="hidden" id="topic_3369546" username="等主人的猫" subject="210815&nbsp;物竞天择，适者生存">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1HoEsZwC6Wc" title="210815&nbsp;物竞天择，适者生存" target="_blank">210815&nbsp;物竞天择，适者生存</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1437)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-14 17:51</td>
+									<td>1154&nbsp;/&nbsp;38165</td>
+									<td>0</td>
+									<td>32</td>
+									<td>2021-08-15</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3315240_2368012">
+										<input type="hidden" id="topic_3315240" username="等主人的猫" subject="210704，风险预警的IPO减速">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1GhEyEOxQUf" title="210704，风险预警的IPO减速" target="_blank">210704，风险预警的IPO减速</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (992)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>07-13 16:40</td>
+									<td>1429&nbsp;/&nbsp;45522</td>
+									<td>0</td>
+									<td>21</td>
+									<td>2021-07-04</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3289300_2368012">
+										<input type="hidden" id="topic_3289300" username="等主人的猫" subject="210612，假期读点有质量的书---《流浪地球》">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1FGr6cp0X8x" title="210612，假期读点有质量的书---《流浪地球》" target="_blank">210612，假期读点有质量的书---《流浪地球》</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (3757)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>07-04 22:50</td>
+									<td>707&nbsp;/&nbsp;20209</td>
+									<td>0</td>
+									<td>15</td>
+									<td>2021-06-12</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3268881_2368012">
+										<input type="hidden" id="topic_3268881" username="等主人的猫" subject="210526，人民币凸破了">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1FeUgPraqjM" title="210526，人民币凸破了" target="_blank">210526，人民币凸破了</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (732)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>06-17 21:25</td>
+									<td>738&nbsp;/&nbsp;23824</td>
+									<td>0</td>
+									<td>17</td>
+									<td>2021-05-26</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3263547_2368012">
+										<input type="hidden" id="topic_3263547" username="等主人的猫" subject="210522，浅谈模式的有效性">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1F7WcJlKmrl" title="210522，浅谈模式的有效性" target="_blank">210522，浅谈模式的有效性</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (617)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-02 07:19</td>
+									<td>166&nbsp;/&nbsp;13925</td>
+									<td>0</td>
+									<td>82</td>
+									<td>2021-05-22</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3255120_2368012">
+										<input type="hidden" id="topic_3255120" username="等主人的猫" subject="210515，所有人误解的预期差">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1EW82QddGpq" title="210515，所有人误解的预期差" target="_blank">210515，所有人误解的预期差</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1251)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>05-08 08:09</td>
+									<td>264&nbsp;/&nbsp;14172</td>
+									<td>0</td>
+									<td>35</td>
+									<td>2021-05-15</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3240954_2368012">
+										<input type="hidden" id="topic_3240954" username="等主人的猫" subject="210501，市场里的天才与白痴">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1EyCCn2JlE3" title="210501，市场里的天才与白痴" target="_blank">210501，市场里的天才与白痴</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1460)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>05-24 11:26</td>
+									<td>388&nbsp;/&nbsp;21740</td>
+									<td>0</td>
+									<td>35</td>
+									<td>2021-05-01</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3224433_2368012">
+										<input type="hidden" id="topic_3224433" username="等主人的猫" subject="210418周期潮汐和交易模式一招鲜">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1Ed4UQjJD56" title="210418周期潮汐和交易模式一招鲜" target="_blank">210418周期潮汐和交易模式一招鲜</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (3530)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-19 19:50</td>
+									<td>945&nbsp;/&nbsp;29561</td>
+									<td>0</td>
+									<td>79</td>
+									<td>2021-04-18</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3208207_2368012">
+										<input type="hidden" id="topic_3208207" username="等主人的猫" subject="210405&nbsp;情绪周期重出江湖&nbsp;-&nbsp;-&nbsp;功守道">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1DS15JJlKCe" title="210405&nbsp;情绪周期重出江湖&nbsp;-&nbsp;-&nbsp;功守道" target="_blank">210405&nbsp;情绪周期重出江湖&nbsp;-&nbsp;-&nbsp;功守道</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2292)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-26 17:49</td>
+									<td>778&nbsp;/&nbsp;22671</td>
+									<td>0</td>
+									<td>50</td>
+									<td>2021-04-05</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3189508_2368012">
+										<input type="hidden" id="topic_3189508" username="等主人的猫" subject="210320，好好珍惜上半年的投机行情">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1DqWPgirsQi" title="210320，好好珍惜上半年的投机行情" target="_blank">210320，好好珍惜上半年的投机行情</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (596)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>07-14 21:21</td>
+									<td>1189&nbsp;/&nbsp;40566</td>
+									<td>0</td>
+									<td>47</td>
+									<td>2021-03-20</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3170149_2368012">
+										<input type="hidden" id="topic_3170149" username="等主人的猫" subject="210304，正确看待价值">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1D0SlEdpJVS" title="210304，正确看待价值" target="_blank">210304，正确看待价值</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1002)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-20 14:41</td>
+									<td>6&nbsp;/&nbsp;5907</td>
+									<td>0</td>
+									<td>17</td>
+									<td>2021-03-04</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3156133_2368012">
+										<input type="hidden" id="topic_3156133" username="等主人的猫" subject="210221,发掘21年比肩新能源车的爆款板块">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1CI4mNzKV1w" title="210221,发掘21年比肩新能源车的爆款板块" target="_blank">210221,发掘21年比肩新能源车的爆款板块</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1829)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-23 21:48</td>
+									<td>1079&nbsp;/&nbsp;33656</td>
+									<td>0</td>
+									<td>16</td>
+									<td>2021-02-21</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3137415_2368012">
+										<input type="hidden" id="topic_3137415" username="等主人的猫" subject="#年报#&nbsp;想知道和赵老哥的距离吗，看看报告">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1C8ulvED51b" title="#年报#&nbsp;想知道和赵老哥的距离吗，看看报告" target="_blank">#年报#&nbsp;想知道和赵老哥的距离吗，看看报告</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (146)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-31 01:03</td>
+									<td>0&nbsp;/&nbsp;12577</td>
+									<td>0</td>
+									<td>6</td>
+									<td>2021-01-31</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3115741_2368012">
+										<input type="hidden" id="topic_3115741" username="等主人的猫" subject="210116，28-82路在何方">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1BKuDY4UZHe" title="210116，28-82路在何方" target="_blank">210116，28-82路在何方</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1492)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>04-02 16:18</td>
+									<td>539&nbsp;/&nbsp;20353</td>
+									<td>0</td>
+									<td>16</td>
+									<td>2021-01-16</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3095558_2368012">
+										<input type="hidden" id="topic_3095558" username="等主人的猫" subject="中欧投资协定，炒航运是不是跑偏了？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1BiPOl669rl" title="中欧投资协定，炒航运是不是跑偏了？" target="_blank">中欧投资协定，炒航运是不是跑偏了？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (154)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-15 15:54</td>
+									<td>296&nbsp;/&nbsp;15184</td>
+									<td>0</td>
+									<td>14</td>
+									<td>2020-12-30</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3063620_2368012">
+										<input type="hidden" id="topic_3063620" username="等主人的猫" subject="201202，超短，起风了">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1AxWZJSaM3s" title="201202，超短，起风了" target="_blank">201202，超短，起风了</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (394)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-14 22:27</td>
+									<td>450&nbsp;/&nbsp;18984</td>
+									<td>0</td>
+									<td>27</td>
+									<td>2020-12-02</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3059353_2368012">
+										<input type="hidden" id="topic_3059353" username="等主人的猫" subject="201129，由小康股份论短线思维的局限">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+
+											<a href="a/1AsGEmyPNjS" title="201129，由小康股份论短线思维的局限" target="_blank">201129，由小康股份论短线思维的局限</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1489)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>04-28 12:42</td>
+									<td>168&nbsp;/&nbsp;11287</td>
+									<td>0</td>
+									<td>48</td>
+									<td>2020-11-29</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3035590_2368012">
+										<input type="hidden" id="topic_3035590" username="等主人的猫" subject="201108，华辰装备，楚王好细腰，后宫多饿死。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1zTTB9hkI5a" title="201108，华辰装备，楚王好细腰，后宫多饿死。" target="_blank">201108，华辰装备，楚王好细腰，后宫多饿死。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (463)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-28 16:17</td>
+									<td>259&nbsp;/&nbsp;12009</td>
+									<td>0</td>
+									<td>16</td>
+									<td>2020-11-08</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="3011728_2368012">
+										<input type="hidden" id="topic_3011728" username="等主人的猫" subject="1018短线交易里面情绪周期的悖论">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1zlh2U2Ivxi" title="1018短线交易里面情绪周期的悖论" target="_blank">1018短线交易里面情绪周期的悖论</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1414)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-06 17:39</td>
+									<td>406&nbsp;/&nbsp;18028</td>
+									<td>0</td>
+									<td>45</td>
+									<td>2020-10-18</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2999394_2368012">
+										<input type="hidden" id="topic_2999394" username="等主人的猫" subject="1001，下个妖怪可能是它">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ySJZZuavhc" title="1001，下个妖怪可能是它" target="_blank">1001，下个妖怪可能是它</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (846)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-19 10:42</td>
+									<td>466&nbsp;/&nbsp;38151</td>
+									<td>0</td>
+									<td>25</td>
+									<td>2020-10-01</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2969694_2368012">
+										<input type="hidden" id="topic_2969694" username="等主人的猫" subject="200905&nbsp;颠覆，注册制创业板运行两周的感悟。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1ykIlSWqjU2" title="200905&nbsp;颠覆，注册制创业板运行两周的感悟。" target="_blank">200905&nbsp;颠覆，注册制创业板运行两周的感悟。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2128)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-26 18:28</td>
+									<td>890&nbsp;/&nbsp;53049</td>
+									<td>0</td>
+									<td>69</td>
+									<td>2020-09-05</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2960249_2368012">
+										<input type="hidden" id="topic_2960249" username="等主人的猫" subject="0827天山特停神助攻">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykIj58eJO0" title="0827天山特停神助攻" target="_blank">0827天山特停神助攻</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (113)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-05 23:11</td>
+									<td>134&nbsp;/&nbsp;10894</td>
+									<td>0</td>
+									<td>21</td>
+									<td>2020-08-27</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2919306_2368012">
+										<input type="hidden" id="topic_2919306" username="等主人的猫" subject="<font color=red>原创征文</font>：0725接下来大盘怎么走？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykI6tsUV2g" title="<font color=red>原创征文</font>：0725接下来大盘怎么走？" target="_blank"><font color="red">原创征文</font>：0725接下来大盘怎么走？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1039)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>08-28 09:09</td>
+									<td>747&nbsp;/&nbsp;37784</td>
+									<td>0</td>
+									<td>22</td>
+									<td>2020-07-25</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2876217_2368012">
+										<input type="hidden" id="topic_2876217" username="等主人的猫" subject="0618，别顶一字，你在退市边缘了。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHTcBupIz" title="0618，别顶一字，你在退市边缘了。" target="_blank">0618，别顶一字，你在退市边缘了。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (393)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>07-31 11:21</td>
+									<td>1576&nbsp;/&nbsp;73475</td>
+									<td>0</td>
+									<td>22</td>
+									<td>2020-06-18</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2795455_2368012">
+										<input type="hidden" id="topic_2795455" username="等主人的猫" subject="0410&nbsp;IPO加速是周末最大的利好">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHu8OGpgW" title="0410&nbsp;IPO加速是周末最大的利好" target="_blank">0410&nbsp;IPO加速是周末最大的利好</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (861)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>06-29 12:54</td>
+									<td>2141&nbsp;/&nbsp;96154</td>
+									<td>0</td>
+									<td>31</td>
+									<td>2020-04-10</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2774271_2368012">
+										<input type="hidden" id="topic_2774271" username="等主人的猫" subject="0324&nbsp;敌人踢的442，超短明天干不干？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHnALdeR0" title="0324&nbsp;敌人踢的442，超短明天干不干？" target="_blank">0324&nbsp;敌人踢的442，超短明天干不干？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (725)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>04-12 23:35</td>
+									<td>570&nbsp;/&nbsp;26202</td>
+									<td>0</td>
+									<td>15</td>
+									<td>2020-03-24</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2770512_2368012">
+										<input type="hidden" id="topic_2770512" username="等主人的猫" subject="0321&nbsp;可转债看到满屏的盲目">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHmqHEACe" title="0321&nbsp;可转债看到满屏的盲目" target="_blank">0321&nbsp;可转债看到满屏的盲目</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (385)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-25 08:53</td>
+									<td>367&nbsp;/&nbsp;23712</td>
+									<td>0</td>
+									<td>39</td>
+									<td>2020-03-21</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2770053_2368012">
+										<input type="hidden" id="topic_2770053" username="等主人的猫" subject="0321超短，杀流动性的背后">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHmiE4zHF" title="0321超短，杀流动性的背后" target="_blank">0321超短，杀流动性的背后</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (938)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-24 17:29</td>
+									<td>72&nbsp;/&nbsp;5821</td>
+									<td>0</td>
+									<td>12</td>
+									<td>2020-03-21</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2749145_2368012">
+										<input type="hidden" id="topic_2749145" username="等主人的猫" subject="200308&nbsp;宅家牛的韧性">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHfPgpQ1B" title="200308&nbsp;宅家牛的韧性" target="_blank">200308&nbsp;宅家牛的韧性</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (347)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-23 18:03</td>
+									<td>700&nbsp;/&nbsp;28158</td>
+									<td>0</td>
+									<td>15</td>
+									<td>2020-03-08</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2736326_2368012">
+										<input type="hidden" id="topic_2736326" username="等主人的猫" subject="200229抵抗式下跌的的背后预示着暴利？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykHbSxDke4" title="200229抵抗式下跌的的背后预示着暴利？" target="_blank">200229抵抗式下跌的的背后预示着暴利？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1446)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>04-06 22:57</td>
+									<td>410&nbsp;/&nbsp;17176</td>
+									<td>0</td>
+									<td>8</td>
+									<td>2020-02-29</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2725825_2368012">
+										<input type="hidden" id="topic_2725825" username="等主人的猫" subject="0221&nbsp;新闻满天飞的特斯拉电池解读">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykH8ERG8jn" title="0221&nbsp;新闻满天飞的特斯拉电池解读" target="_blank">0221&nbsp;新闻满天飞的特斯拉电池解读</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1134)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-24 08:24</td>
+									<td>32&nbsp;/&nbsp;4291</td>
+									<td>0</td>
+									<td>3</td>
+									<td>2020-02-22</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2723656_2368012">
+										<input type="hidden" id="topic_2723656" username="等主人的猫" subject="2020220，股市是个很打脸的地方">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykH7ZGZtyk" title="2020220，股市是个很打脸的地方" target="_blank">2020220，股市是个很打脸的地方</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (494)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-03 22:25</td>
+									<td>575&nbsp;/&nbsp;34747</td>
+									<td>0</td>
+									<td>12</td>
+									<td>2020-02-20</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2709776_2368012">
+										<input type="hidden" id="topic_2709776" username="等主人的猫" subject="0210瀑布面雨后，切主线高赔率时点来临">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykH3COyAAQ" title="0210瀑布面雨后，切主线高赔率时点来临" target="_blank">0210瀑布面雨后，切主线高赔率时点来临</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (312)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-28 18:37</td>
+									<td>14&nbsp;/&nbsp;1247</td>
+									<td>0</td>
+									<td>4</td>
+									<td>2020-02-10</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2706402_2368012">
+										<input type="hidden" id="topic_2706402" username="等主人的猫" subject="0207独立新题材来了，高低切换。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykH2zGt2bm" title="0207独立新题材来了，高低切换。" target="_blank">0207独立新题材来了，高低切换。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (139)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-09 13:58</td>
+									<td>43&nbsp;/&nbsp;3576</td>
+									<td>0</td>
+									<td>4</td>
+									<td>2020-02-07</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2704240_2368012">
+										<input type="hidden" id="topic_2704240" username="等主人的猫" subject="0206估计短线今天高潮，数据告诉你怎么操作。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykH1TK5MFl" title="0206估计短线今天高潮，数据告诉你怎么操作。" target="_blank">0206估计短线今天高潮，数据告诉你怎么操作。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (245)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-20 20:51</td>
+									<td>583&nbsp;/&nbsp;27047</td>
+									<td>0</td>
+									<td>15</td>
+									<td>2020-02-06</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2697460_2368012">
+										<input type="hidden" id="topic_2697460" username="等主人的猫" subject="宅文化受益标的，应该炒网络游戏">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGZMm5kLz" title="宅文化受益标的，应该炒网络游戏" target="_blank">宅文化受益标的，应该炒网络游戏</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (105)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-04 08:40</td>
+									<td>23&nbsp;/&nbsp;2171</td>
+									<td>0</td>
+									<td>3</td>
+									<td>2020-01-31</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2689293_2368012">
+										<input type="hidden" id="topic_2689293" username="等主人的猫" subject="0115今天短线砸痛了明天咋整？又发红包了。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGXbjhpk7" title="0115今天短线砸痛了明天咋整？又发红包了。" target="_blank">0115今天短线砸痛了明天咋整？又发红包了。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (529)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>02-13 22:48</td>
+									<td>196&nbsp;/&nbsp;9825</td>
+									<td>0</td>
+									<td>10</td>
+									<td>2020-01-15</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2685426_2368012">
+										<input type="hidden" id="topic_2685426" username="等主人的猫" subject="跨年妖怪出现了，应该就是它">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGW25FmYu" title="跨年妖怪出现了，应该就是它" target="_blank">跨年妖怪出现了，应该就是它</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (265)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-15 20:08</td>
+									<td>17&nbsp;/&nbsp;2546</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2020-01-11</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2684125_2368012">
+										<input type="hidden" id="topic_2684125" username="等主人的猫" subject="准备过年了，发个确定性高的致富代码">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGVEjkOjg" title="准备过年了，发个确定性高的致富代码" target="_blank">准备过年了，发个确定性高的致富代码</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (272)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-15 23:34</td>
+									<td>10&nbsp;/&nbsp;2031</td>
+									<td>0</td>
+									<td>6</td>
+									<td>2020-01-09</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2678159_2368012">
+										<input type="hidden" id="topic_2678159" username="等主人的猫" subject="每笔交易后面都是人性">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGTNIdrsx" title="每笔交易后面都是人性" target="_blank">每笔交易后面都是人性</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (469)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-15 18:34</td>
+									<td>284&nbsp;/&nbsp;16206</td>
+									<td>0</td>
+									<td>7</td>
+									<td>2020-01-03</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2671494_2368012">
+										<input type="hidden" id="topic_2671494" username="等主人的猫" subject="注册制刷屏，2020年投资策略的探讨">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGREZk9HC" title="注册制刷屏，2020年投资策略的探讨" target="_blank">注册制刷屏，2020年投资策略的探讨</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1115)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-31 13:49</td>
+									<td>108&nbsp;/&nbsp;17276</td>
+									<td>0</td>
+									<td>11</td>
+									<td>2019-12-28</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2666855_2368012">
+										<input type="hidden" id="topic_2666855" username="等主人的猫" subject="1223，一根大阴线，直接回冰点，明天机会来了">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGQfFGrSD" title="1223，一根大阴线，直接回冰点，明天机会来了" target="_blank">1223，一根大阴线，直接回冰点，明天机会来了</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (347)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-10 07:53</td>
+									<td>401&nbsp;/&nbsp;21800</td>
+									<td>0</td>
+									<td>13</td>
+									<td>2019-12-23</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2659076_2368012">
+										<input type="hidden" id="topic_2659076" username="等主人的猫" subject="利好兑现后的交易策略，周复盘">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGNLoYS1e" title="利好兑现后的交易策略，周复盘" target="_blank">利好兑现后的交易策略，周复盘</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1106)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-25 13:27</td>
+									<td>87&nbsp;/&nbsp;9739</td>
+									<td>0</td>
+									<td>7</td>
+									<td>2019-12-15</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2654577_2368012">
+										<input type="hidden" id="topic_2654577" username="等主人的猫" subject="万通智控，下午要反包">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGMkXeg9G" title="万通智控，下午要反包" target="_blank">万通智控，下午要反包</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (144)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-15 11:39</td>
+									<td>81&nbsp;/&nbsp;5642</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2019-12-10</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2644760_2368012">
+										<input type="hidden" id="topic_2644760" username="等主人的猫" subject="绝望了吗？现在应该勇敢冲？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGJdv1UUd" title="绝望了吗？现在应该勇敢冲？" target="_blank">绝望了吗？现在应该勇敢冲？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (346)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-09 23:44</td>
+									<td>50&nbsp;/&nbsp;4900</td>
+									<td>0</td>
+									<td>7</td>
+									<td>2019-11-28</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2633358_2368012">
+										<input type="hidden" id="topic_2633358" username="等主人的猫" subject="都跌懵了吧，超短明天怎么赚钱？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGFEW8DsR" title="都跌懵了吧，超短明天怎么赚钱？" target="_blank">都跌懵了吧，超短明天怎么赚钱？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (341)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-28 23:36</td>
+									<td>137&nbsp;/&nbsp;10761</td>
+									<td>0</td>
+									<td>7</td>
+									<td>2019-11-11</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2626372_2368012">
+										<input type="hidden" id="topic_2626372" username="等主人的猫" subject="诚迈科技是要重走长征路啊">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGDAvduAi" title="诚迈科技是要重走长征路啊" target="_blank">诚迈科技是要重走长征路啊</a>(344)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-04 18:55</td>
+									<td>6&nbsp;/&nbsp;1256</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2019-11-04</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2624130_2368012">
+										<input type="hidden" id="topic_2624130" username="等主人的猫" subject="新湖中宝，又是爆量，又是高标，又是周末">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGCUGMZDO" title="新湖中宝，又是爆量，又是高标，又是周末" target="_blank">新湖中宝，又是爆量，又是高标，又是周末</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (104)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-08 18:02</td>
+									<td>142&nbsp;/&nbsp;10506</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2019-11-01</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2623143_2368012">
+										<input type="hidden" id="topic_2623143" username="等主人的猫" subject="可能，技术底部来了">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGCCQkzxI" title="可能，技术底部来了" target="_blank">可能，技术底部来了</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (346)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-02 11:10</td>
+									<td>19&nbsp;/&nbsp;1686</td>
+									<td>0</td>
+									<td>5</td>
+									<td>2019-10-31</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2620098_2368012">
+										<input type="hidden" id="topic_2620098" username="等主人的猫" subject="区块链，谈谈市场的变态进化">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGBGcsDwt" title="区块链，谈谈市场的变态进化" target="_blank">区块链，谈谈市场的变态进化</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (713)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-03 13:16</td>
+									<td>71&nbsp;/&nbsp;10576</td>
+									<td>0</td>
+									<td>34</td>
+									<td>2019-10-29</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2618221_2368012">
+										<input type="hidden" id="topic_2618221" username="等主人的猫" subject="区块链还没到看基本面炒的时候">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGB80Eg8e" title="区块链还没到看基本面炒的时候" target="_blank">区块链还没到看基本面炒的时候</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (149)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-29 21:57</td>
+									<td>4&nbsp;/&nbsp;1143</td>
+									<td>0</td>
+									<td>4</td>
+									<td>2019-10-28</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2616331_2368012">
+										<input type="hidden" id="topic_2616331" username="等主人的猫" subject="周一区块链买不进，怎么套利">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGAAQq0Pd" title="周一区块链买不进，怎么套利" target="_blank">周一区块链买不进，怎么套利</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (358)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>01-21 08:30</td>
+									<td>26&nbsp;/&nbsp;3181</td>
+									<td>0</td>
+									<td>4</td>
+									<td>2019-10-27</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2613927_2368012">
+										<input type="hidden" id="topic_2613927" username="等主人的猫" subject="很多老师没看出振静股份的风险">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGzTm6ljh" title="很多老师没看出振静股份的风险" target="_blank">很多老师没看出振静股份的风险</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (282)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-25 17:26</td>
+									<td>15&nbsp;/&nbsp;1613</td>
+									<td>0</td>
+									<td>3</td>
+									<td>2019-10-24</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2610271_2368012">
+										<input type="hidden" id="topic_2610271" username="等主人的猫" subject="你盯着上面，主力却盯着下面。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGyQt3wNK" title="你盯着上面，主力却盯着下面。" target="_blank">你盯着上面，主力却盯着下面。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (352)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-02 11:26</td>
+									<td>6&nbsp;/&nbsp;1334</td>
+									<td>0</td>
+									<td>3</td>
+									<td>2019-10-21</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2607337_2368012">
+										<input type="hidden" id="topic_2607337" username="等主人的猫" subject="极端行情下，明天谁做高标？华金资本？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGxXGtqlN" title="极端行情下，明天谁做高标？华金资本？" target="_blank">极端行情下，明天谁做高标？华金资本？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (450)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-18 08:17</td>
+									<td>9&nbsp;/&nbsp;2838</td>
+									<td>0</td>
+									<td>2</td>
+									<td>2019-10-17</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2601262_2368012">
+										<input type="hidden" id="topic_2601262" username="等主人的猫" subject="接力打板，是你打板还是板打你">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGwdVZY5E" title="接力打板，是你打板还是板打你" target="_blank">接力打板，是你打板还是板打你</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (779)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-12 12:59</td>
+									<td>10&nbsp;/&nbsp;2996</td>
+									<td>0</td>
+									<td>7</td>
+									<td>2019-10-10</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2598144_2368012">
+										<input type="hidden" id="topic_2598144" username="等主人的猫" subject="共振冰点，龙出没，请注意">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGvkg44dc" title="共振冰点，龙出没，请注意" target="_blank">共振冰点，龙出没，请注意</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (624)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-09 21:51</td>
+									<td>10&nbsp;/&nbsp;3941</td>
+									<td>0</td>
+									<td>5</td>
+									<td>2019-10-07</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2597598_2368012">
+										<input type="hidden" id="topic_2597598" username="等主人的猫" subject="反包的真相">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGvbhZSno" title="反包的真相" target="_blank">反包的真相</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1424)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-23 17:16</td>
+									<td>92&nbsp;/&nbsp;11291</td>
+									<td>0</td>
+									<td>13</td>
+									<td>2019-10-06</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2596884_2368012">
+										<input type="hidden" id="topic_2596884" username="等主人的猫" subject="还原宝鼎科技的走势，资金在做什么，应该怎么上车">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1ykGuYxt189" title="还原宝鼎科技的走势，资金在做什么，应该怎么上车" target="_blank">还原宝鼎科技的走势，资金在做什么，应该怎么上车</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (2599)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>11-11 17:08</td>
+									<td>252&nbsp;/&nbsp;37083</td>
+									<td>0</td>
+									<td>44</td>
+									<td>2019-10-03</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2596643_2368012">
+										<input type="hidden" id="topic_2596643" username="等主人的猫" subject="致依国庆仍在充电的人们">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGuTJHNG6" title="致依国庆仍在充电的人们" target="_blank">致依国庆仍在充电的人们</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (1145)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>10-04 22:06</td>
+									<td>24&nbsp;/&nbsp;3823</td>
+									<td>0</td>
+									<td>17</td>
+									<td>2019-10-02</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2595631_2368012">
+										<input type="hidden" id="topic_2595631" username="等主人的猫" subject="横刀立马，明天随时杀入敌阵">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGuBhuKnc" title="横刀立马，明天随时杀入敌阵" target="_blank">横刀立马，明天随时杀入敌阵</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (580)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-24 21:06</td>
+									<td>67&nbsp;/&nbsp;4700</td>
+									<td>0</td>
+									<td>4</td>
+									<td>2019-09-30</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2594382_2368012">
+										<input type="hidden" id="topic_2594382" username="等主人的猫" subject="银保山新有感。饺子说过，他记录失败的交易">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGufacAYT" title="银保山新有感。饺子说过，他记录失败的交易" target="_blank">银保山新有感。饺子说过，他记录失败的交易</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (417)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-28 16:28</td>
+									<td>16&nbsp;/&nbsp;3381</td>
+									<td>0</td>
+									<td>4</td>
+									<td>2019-09-27</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2590545_2368012">
+										<input type="hidden" id="topic_2590545" username="等主人的猫" subject="一个冲高回落，全村到处找利空，想过反包吗？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGt9iW86J" title="一个冲高回落，全村到处找利空，想过反包吗？" target="_blank">一个冲高回落，全村到处找利空，想过反包吗？</a>(432)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-24 21:55</td>
+									<td>9&nbsp;/&nbsp;2673</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2019-09-24</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2589091_2368012">
+										<input type="hidden" id="topic_2589091" username="等主人的猫" subject="早盘估计做龙头的选手乱七八糟买了一堆“高度板”吧">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGsJbQ95Y" title="早盘估计做龙头的选手乱七八糟买了一堆“高度板”吧" target="_blank">早盘估计做龙头的选手乱七八糟买了一堆“高度板”吧</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (374)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-25 08:42</td>
+									<td>33&nbsp;/&nbsp;2049</td>
+									<td>0</td>
+									<td>3</td>
+									<td>2019-09-23</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2586844_2368012">
+										<input type="hidden" id="topic_2586844" username="等主人的猫" subject="无论你承认与否，今天历史重复了">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGs5mjYy4" title="无论你承认与否，今天历史重复了" target="_blank">无论你承认与否，今天历史重复了</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (197)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-23 14:03</td>
+									<td>5&nbsp;/&nbsp;1413</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2019-09-19</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2586201_2368012">
+										<input type="hidden" id="topic_2586201" username="等主人的猫" subject="有点服自己选股，简直枪林弹雨取上将首级">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGrTyy49a" title="有点服自己选股，简直枪林弹雨取上将首级" target="_blank">有点服自己选股，简直枪林弹雨取上将首级</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (187)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-19 11:57</td>
+									<td>9&nbsp;/&nbsp;1002</td>
+									<td>0</td>
+									<td>2</td>
+									<td>2019-09-19</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2585137_2368012">
+										<input type="hidden" id="topic_2585137" username="等主人的猫" subject="坐和望赢，绝对不是割肉日">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGryXMl53" title="坐和望赢，绝对不是割肉日" target="_blank">坐和望赢，绝对不是割肉日</a>(444)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-18 16:08</td>
+									<td>3&nbsp;/&nbsp;925</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2019-09-18</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2583929_2368012">
+										<input type="hidden" id="topic_2583929" username="等主人的猫" subject="高度板光力科技怎么整？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGrdUl7RA" title="高度板光力科技怎么整？" target="_blank">高度板光力科技怎么整？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (284)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-17 23:09</td>
+									<td>27&nbsp;/&nbsp;1738</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2019-09-16</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2583314_2368012">
+										<input type="hidden" id="topic_2583314" username="等主人的猫" subject="有个高度板的套利机会，网络安全">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGr2wGlA2" title="有个高度板的套利机会，网络安全" target="_blank">有个高度板的套利机会，网络安全</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (312)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-16 15:02</td>
+									<td>2&nbsp;/&nbsp;1035</td>
+									<td>0</td>
+									<td>3</td>
+									<td>2019-09-16</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2582105_2368012">
+										<input type="hidden" id="topic_2582105" username="等主人的猫" subject="论高标中威电子，抛开市场谈个股就是菜">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+												<img src="https://css.tgb.cn/images/icon43.gif">&nbsp;
+
+
+
+
+											<a href="a/1ykGqGoxnK8" title="论高标中威电子，抛开市场谈个股就是菜" target="_blank">论高标中威电子，抛开市场谈个股就是菜</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (620)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>03-26 16:22</td>
+									<td>360&nbsp;/&nbsp;25255</td>
+									<td>0</td>
+									<td>44</td>
+									<td>2019-09-13</td>
+								</tr>
+
+								<tr class="">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2581538_2368012">
+										<input type="hidden" id="topic_2581538" username="等主人的猫" subject="新周期新版块来了，利好来了，炸弹拆了。">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGqwEuYX0" title="新周期新版块来了，利好来了，炸弹拆了。" target="_blank">新周期新版块来了，利好来了，炸弹拆了。</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (421)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>09-16 11:49</td>
+									<td>21&nbsp;/&nbsp;3418</td>
+									<td>0</td>
+									<td>2</td>
+									<td>2019-09-12</td>
+								</tr>
+
+								<tr class="alt1">
+									<td>
+										<input name="topicIDList" type="checkbox" onclick="getKeyWordStr(this,'deleteData')" value="2576891_2368012">
+										<input type="hidden" id="topic_2576891" username="等主人的猫" subject="实盘告诉你九鼎新材错在哪？">
+									</td>
+						            <td class="suh" align="left" height="26">
+										<div>
+
+
+
+												<img src="https://css.tgb.cn/images/icon41.gif">&nbsp;
+
+
+											<a href="a/1ykGpb2MoCm" title="实盘告诉你九鼎新材错在哪？" target="_blank">实盘告诉你九鼎新材错在哪？</a> <img src="https://css.tgb.cn/images/lighten/deng1.gif" title="有跟帖亮了"> (583)
+										</div></td>
+									<td style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="blog/2368012">等主人的猫 </a></td>
+									<td>12-26 20:02</td>
+									<td>4&nbsp;/&nbsp;2072</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2019-09-06</td>
+								</tr>
+
+					</tbody></table>
+					<input type="hidden" value="" id="deleteData" name="deleteData">
+					<input type="hidden" value="2 " id="pageNum" name="pageNum">
+				</form>
+				</td>
+			</tr>
+			<tr>
+				<td height="30px">
+					<table width="100%">
+						<tbody><tr class="oper_span">
+
+							<td width="820px" align="right" style="padding-right:15px;">
+								<span><a href="javascript:gotoPage('1');">刷新</a>
+								</span>|1/2|
+
+
+
+										<span>首页</span>|<span>上页</span>|
+
+
+
+
+
+									<span><a href="javascript:gotoPage('2');">下页</a>
+									</span>|
+										<span><a href="javascript:gotoPage('2');">末页</a>
+									</span>|
+
+
+							</td>
+							<td width="10px"></td>
+							<td width="80px"></td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+
+		</div>
+
+
+
+
+	<link href="https://css.tgb.cn/res/css/report/report.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://css.tgb.cn/res/css/shuo/cropper.min.css">
+    <script type="text/javascript" src="https://css.tgb.cn/res/js/shuo/cropper.min.js"></script>
+    <script type="text/javascript" src="https://js.tgb.cn/res/js/disclaimer.js"></script>
+
+
+
+   <div id="wrap_footer">
+	   	<div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+	     <!-- 登录弹出框出现位置 -->
+   <div class="footMD"></div>
+   <div id="joinTGB">
+       <div class="join_container">
+      <div class="left">
+         <span class="join_slogan">加入淘股吧, 与千万投资者为伍</span>
+        <div class="join_btns">
+            <a class="join_btn QQjoin" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&amp;client_id=100267484&amp;redirect_uri=https://www.tgb.cn/thirdQQGetToken" target="_blank">
+                <img src="https://css.tgb.cn/images/QQIcon.png" alt="">
+                <span>QQ登录</span>
+             </a>
+
+
+
+
+             <span onclick="loginPanel()" class="join_btn TGBjoin" href="" target="_blank">
+
+                <span>淘股吧登录</span>
+             </span>
+             或 快速登录/注册淘股吧账号
+        </div>
+      </div>
+      <div class="tgb_icon left"></div>
+      <span class="join_download left" target="_blank">扫码下载淘股吧App</span>
+      <div class="join_code2 left"></div>
+      <div class="clear"></div>
+      <div class="join_close" onclick="closeTGBjoin()"></div>
+       </div>
+   </div>
+
+   <div id="footer">
+
+       <div id="footer_container1">
+            <div class="footer1 left">
+             <div class="footer_title">关于我们</div>
+             <span>淘股吧：职业投资者都用的移动互联投资社交化平台</span>
+            <div class="footer_about">
+                    淘股吧中国大陆知名的移动互联投资社交化平台，平台向用户提供免费信息存储空间，服务于证券市场上亿的证券投资者，
+                    在淘股吧上活跃着上百万的职业投资者，每天分享丰富证券交易、投 资心得。投资者可在淘股吧上认识投资高手，
+                    订阅自选股信息，包括公告、资讯、研报、讨论、股吧、高手操盘、热点主题等动态信息，以加强股票跟踪，促进好友沟通。
+            </div>
+                </div>
+                <div class="footer2 left">
+                        <div class="footer_title">链接</div>
+                        <ul>
+                            <li class="footer_link">
+                                <a href="https://www.tgb.cn/xinshou/" target="_blank">新手上路</a>
+                                <a href="https://www.tgb.cn/aboutus/mzsm" rel="nofollow" target="_blank">免责声明</a>
+                            </li>
+                            <li class="footer_link">
+                                    <a rel="nofollow" href="https://www.tgb.cn/aboutus/bqsm" target="_blank">版权声明</a>
+                                    <a href="https://www.tgb.cn/aboutus/toSitemap" target="_blank">网站地图</a>
+                            </li>
+                            <li class="footer_link">
+                                    <a href="https://www.tgb.cn/aboutus/adRule" rel="nofollow" target="_blank">广告合作</a>
+                                    <a href="https://www.tgb.cn/aboutus/initShowTgbFLs?flFlag=F" rel="nofollow" target="_blank">友情链接</a>
+                            </li>
+                            <li class="footer_link">
+                                     <b onclick="setReport(2,0,0,0,0,0)">意见反馈</b>
+                                    <a href="https://www.tgb.cn/aboutus/communityRules" rel="nofollow" target="_blank">社区规则</a>
+                            </li>
+                        </ul>
+                </div>
+                  <div class="footer3 left">
+                        <div class="footer_title">微信订阅</div>
+                        <ul>
+                            <li class="footer_code" onmouseover="showFooterQrcode(this)" onmouseout="hideFooterQrcode(this)">
+                             <img src="https://css.tgb.cn/images/davNew/footer_img_icon1.png" class="img_icon left" alt="">
+                             <span class="Footer_code left">淘股吧主号</span>
+                             <div class="clear"></div>
+                             <img src="https://css.tgb.cn/images/davNew/footer_img_qrcode1.png" class="img_qrCode" alt="">
+                            </li>
+                            <li class="footer_code" onmouseover="showFooterQrcode(this)" onmouseout="hideFooterQrcode(this)">
+                             <img src="https://css.tgb.cn/images/davNew/footer_img_icon2.png" class="img_icon left" alt="">
+                             <span class="Footer_code left">淘股吧午盘</span>
+                              <div class="clear"></div>
+                             <img src="https://css.tgb.cn/images/davNew/footer_img_qrcode2.png" class="img_qrCode" alt="">
+                            </li>
+                            <li class="footer_code" onmouseover="showFooterQrcode(this)" onmouseout="hideFooterQrcode(this)">
+                             <img src="https://css.tgb.cn/images/davNew/footer_img_icon3.png" class="img_icon left" alt="">
+                             <span class="Footer_code left">淘股吧早盘</span>
+                              <div class="clear"></div>
+                             <img src="https://css.tgb.cn/images/davNew/footer_img_qrcode3.png" class="img_qrCode" alt="">
+                            </li>
+
+
+
+
+
+
+                        </ul>
+                </div>
+                <div class="footer5 right">
+                        <div class="footer_title">淘股吧APP下载</div>
+                        <div class="join_code3"></div>
+                        <div class="footer3_text">iPhone &amp; Android</div>
+                </div>
+                <div class="clear"></div>
+       </div>
+   </div>
+  <div id="footer_container2">
+       <div class="footer2_container">
+       <div id="license_info">
+        <div class="license-top">
+            <span class="license-icon left"></span>
+            <span class="license-text left">营业执照信息</span>
+            <div class="clear"></div>
+        </div>
+        <ul class="license-items">
+         <li class="license-shot left">统一社会信用代码：<span>9135010268937276XY</span></li>
+         <li class="license-shot left">企业名称：<span>福州淘股吧互联网股份有限公司</span></li>
+         <li class="license-shot left">类型：<span>股份有限公司(非上市、自然人投资或控股)</span></li>
+         <li class="license-shot left">法定代表人：<span>张知斌</span></li>
+         <li class="license-shot left">注册资本：<span>500.000000万人民币</span></li>
+         <li class="license-shot left">成立日期：<span>2009年5月31日</span></li>
+         <li class="license-shot left">营业期限自：<span>2009年5月31日</span></li>
+         <li class="license-shot left">营业期限至：</li>
+         <li class="license-shot left">登记机关：<span>福州市市场监督管理局</span></li>
+         <li class="license-shot left">核准日期：<span>2020年6月29日</span></li>
+         <li class="license-long left">登记状态：<span>存续（在营、开业、在册）</span></li>
+         <li class="license-long left">住所：<span>福建省福州市晋安区连江北路与化工路交叉处东二环泰禾城市广场四期2号楼15A层08-09单元</span></li>
+         <li class="license-long left">经营范围：<span>网络技术服务；信息服务业务；广告咨询服务；设计、制作、代理发布国内各类广告；信息技术咨询服务；应用软件开发；在线数据处理与交易处理业务；基础软件开发；支撑软件开发；大数据服务；
+             人工智能基础资源与技术平台；其他未列明信息技术服务。（依法须经批准的项目，经相关部门批准后可开展经营活动）
+         </span></li>
+         <div class="clear"></div>
+        </ul>
+    </div>
+           <div class="left" style="margin-top: 10px;">
+               <p><font id="disclaimer" color="#fff">郑重声明：用户在淘股吧发表的所有信息（包括但不限于文字、视频、音频、数据及图表）仅代表个人观点，与本网站立场无关，不对您构成任何投资建议，据此操作风险自担。</font></p>
+               <p>Copyright 2007-2025 © <span id="compony_info">福州淘股吧互联网股份有限公司</span> 版权所有&nbsp;&nbsp;tgb.cn  taoguba.net</p>
+      <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">闽ICP备09037174号-3</a>&nbsp;&nbsp;增值电信业务经营许可证：闽 B2-20090069&nbsp;&nbsp;
+          <a href="mailto:taoguba168@taoguba.com.cn" target="_blank">taoguba168@taoguba.com.cn &nbsp;郑先生</a> &nbsp;&nbsp;<a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35010002000108" target="_blank" rel="nofollow">闽公网安备 35010002000108号</a>
+        </p>
+           </div>
+           <div class="right" style="margin-right:5px;">
+               <a href="https://wj.fz12315.gov.cn/" target="_blank">
+                   <img class="footer_wj" src="https://css.tgb.cn/images/fzwj.png" alt="">
+               </a>
+               <a href="https://www.cyberpolice.cn/" target="_blank">
+                   <img class="footer_police" src="https://css.tgb.cn/images/bjt.gif" alt="">
+               </a>
+           </div>
+           <div class="clear"></div>
+       </div>
+   </div>
+   </div>
+    <div id="idModal" class="report-modal" style="display:none;">
+		<input id="report-reason" type="hidden" value="1">
+        <div id="idModalDetail" class="report-modal-content">
+            <div id="idModalTitle" class="report-modal-title">
+                <span>举报</span>
+                <div class="report-modal-close" onclick="Cancelreport()"></div>
+            </div>
+            <div class="report-modal-body">
+
+
+
+
+
+
+
+
+
+                <div class="report-subinfo2">
+                &nbsp;To: 淘股吧产品
+                </div>
+                <div class="report-reasons">
+                    <div class="report-subjectName">举报原因</div>
+                    <div class="report-reasons-content">
+                            <div class="ReasonItem ngbRadioChoose left" data-value="1">
+                                    <span class="ngbRadio  left"></span> <span class="radioText left">公布联系方式和广告</span>
+                                    <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="2">
+                                    <span class="ngbRadio  left"></span> <span class="radioText left">是非和人身攻击</span>
+                                    <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="3">
+                                    <span class="ngbRadio  left"></span> <span class="radioText left">政治性或不当言论</span>
+                                    <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="8">
+                                <span class="ngbRadio left"></span> <span class="radioText left"> 非法证券期货活动</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="4">
+                                    <span class="ngbRadio  left"></span> <span class="radioText left">水帖</span>
+                                    <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="5">
+                                    <span class="ngbRadio  left"></span> <span class="radioText left">刷屏</span>
+                                    <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="7">
+                                <span class="ngbRadio  left"></span> <span class="radioText left">算法推荐专项</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="ReasonItem left" data-value="6">
+                                <span class="ngbRadio  left"></span> <span class="radioText left">其他原因</span>
+                                    <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                    </div>
+                    <div class="report-subjectName">
+                    <span style="color:#4793F1;cursor:pointer;" onclick="otherReports()">其他举报</span>
+                    </div>
+                </div>
+                <div id="other-report" style="display:none;">
+                <div class="other-report">
+                        <div class="report-subjectName">输入举报描述</div>
+                        <textarea name="" placeholder="输入要投诉的内容" id="other-report-text" class="other-report-text"> </textarea>
+                        <div id="nowWord">0/200</div>
+                </div>
+                <div class="report-evidence">
+                    <b class="left">证据截图</b>
+                    <div class="evidence-imgSelect left">
+                            <input type="file" name="" id="imgFile">
+                    </div>
+                    <div class="left evidence-upload" onclick="uploadImgages()">上传</div>
+                    <div class="evidence-image-length right"><span>0</span>/4</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="evidence-images">
+                </div>
+                </div>
+                <div id="report-footer">
+                    <div id="cancleReport" onclick="Cancelreport()" class="left">取消</div>
+                    <div id="confirmReport" onclick="Confirmreport()" class="right">确定</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+ <script type="text/javascript">
+ $('#compony_info').mouseover(function(){$('#license_info').show()})
+ $('#compony_info').mouseout(function(){$('#license_info').hide()})
+ var Fislogin = $('.XLD_num2').length;
+ var GTBjoin_status = 'false';
+ if((window.location.href).indexOf('getDvViewPointNew') > -1){
+	 GTBjoin_status = 'false';
+ }else{
+	 GTBjoin_status = 'true';
+ }
+ if(Fislogin==0){
+	 $('#joinTGB').show();
+	 $('#footer').css('margin-top','0px');
+ }
+ $(window).scroll(function(){
+	 var h = document.documentElement.clientHeight || document.body.clientHeight;
+if(Fislogin==0 && GTBjoin_status=='true'){
+   $('#footer').css('margin-top','0px');
+   var h1 = $('.footMD').offset().top -500;
+   $('#joinTGB').show();
+   if($(window).scrollTop() + 276>h1 ){
+       $('#joinTGB').css({'position':'relative',
+       'bottom':'0px'});
+   }else{
+     $('#joinTGB').css({'position':'fixed','bottom':'0px'});
+   }
+}
+ })
+
+function closeTGBjoin(){
+     GTBjoin_status='false';
+     $('#joinTGB').hide();
+     $('#footer').css('margin-top','20px');
+ }
+  function addLoadEvent(func){
+      var oldonload = window.onload;
+      if(typeof window.onload != 'function'){
+           window.onload = func;
+      }else{
+           window.onload = function(){
+                oldonload();
+                func();
+           }
+      }
+ }
+   //是否是PC浏览器
+   function IsPC(){
+	     var userAgentInfo = navigator.userAgent;
+	     var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+	     var flag = true;
+	     for (var v = 0; v < Agents.length; v++) {
+	         if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+	     }
+	     return flag;
+	  }
+   function showFooterQrcode(obj){
+		  $(obj).find('.img_qrCode').show();
+	  }
+	  function hideFooterQrcode(obj){
+		  $(obj).find('.img_qrCode').hide();
+	  }
+	  requirejs([minConfig.index_tgbgg,minConfig.report_report], function(index_tgbgg,report){});
+
+   function Disclaimer() {
+       document.getElementById('disclaimer').innerText = DisclaimerConfig.Message;
+   }
+   Disclaimer()
+</script>
+
+<script type="text/javascript" src="//js.tgb.cn/res/js/common/cnzz.js"></script>
+<!--<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>-->
+
+
+
+<script></script></body></html>

@@ -1,11 +1,13 @@
 [project]
 name = "primary"
 version = "0.1.0"
-description = "Add your description here"
+description = "primary data collectors"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">3.10"
 dependencies = [
+    "allure-pytest>=2.13.5",
     "drissionpage>=4.1.0.13",
+    "faker>=36.1.1",
     "markdown>=3.7",
     "pandas>=2.2.3",
     "pdfkit>=1.0.0",
@@ -16,6 +18,7 @@ dependencies = [
     "rich>=13.9.4",
     "seleniumbase>=4.33.11",
     "weasyprint>=63.1",
+    "yt-dlp>=2025.2.19",
 ]
 
 [project.scripts]

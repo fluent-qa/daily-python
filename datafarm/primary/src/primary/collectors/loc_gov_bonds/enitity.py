@@ -170,14 +170,5 @@ class BondProjectDetail(SQLModel, table=True):
     amount: str = Field(alias="金额（万元）", description="金额（万元）", nullable=True)
     bond_years: int = Field(alias="债券年份", description="债券年份", nullable=True)
 
-# class BondProject(SQLModel, table=True):
-#     __tablename__ = 'bond_projects'
-#     id: Optional[int] = Field(default=None, primary_key=True)
-#     bond_code: str = Field(alias="债券代码", description="债券代码", nullable=True)
-#     bond_batch: Optional[str] = Field(default=None, alias="债券批次（可以为空）", description="债券批次（可以为空）",
-#                                       nullable=True)
-#     bond_name: str = Field(alias="债券期数", description="债券期数", nullable=True)
-#     region: str = Field(alias="所属地区（市区县）", description="所属地区（市区县）", nullable=True)
-#     project_name: str = Field(alias="项目名称", description="项目名称", nullable=True)
-#     amount: str = Field(alias="金额（万元）", description="金额（万元）", nullable=True)
+
 

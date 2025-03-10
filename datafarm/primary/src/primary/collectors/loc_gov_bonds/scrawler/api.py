@@ -1,6 +1,5 @@
-from time import sleep
-
-import requests
+from primary.collectors.loc_gov_bonds.models import BondData
+from primary.pd_ext import models_to_file
 
 local_gov_debt_url = """
 https://www.governbond.org.cn:4443/api/loadBondData.action?timeStamp=1731404338868&dataType=ZQFXLISTBYAD&adList=&adCode=87&zqlx=&year=&fxfs=&qxr=&fxqx=&zqCode=&zqName=
@@ -123,14 +122,23 @@ if __name__ == "__main__":
     # Fetch multiple pages
     all_data = fetch_all_bond_data(
         start_page=1,
-        max_pages=1500,
+        max_pages=3,
         page_size=10,
         delay=2
     )
     print(f"Fetched {len(all_data)} pages of data")
+    bonds = []
+    for data in all_data:
+        bond_list=data["data"]
+        for item in bond_list:
+            bonds.append(BondData(**item))
+
+    models_to_file(bonds,'overall.csv')
 
     # Save to file
     import json
 
     with open('bond_data.json', 'w', encoding='utf-8') as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
+
+

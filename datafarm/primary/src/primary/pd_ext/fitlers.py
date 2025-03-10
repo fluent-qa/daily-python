@@ -7,7 +7,6 @@ import pandas as pd
 from .convert_funcs import read_to_df
 
 
-
 def filter_by_columns(df: pd.DataFrame, column_filters: Dict[str, Any]) -> pd.DataFrame:
     """
     Generic function to filter DataFrame based on column filters
@@ -42,3 +41,5 @@ def filter_table_file(excel_file: str | Path, column_filters: Dict[str, Any], ou
     df = read_to_df(excel_file, file_type)
     filtered_df = filter_by_columns(df, column_filters)
     filtered_df.to_csv(output_path, index=False)
+
+

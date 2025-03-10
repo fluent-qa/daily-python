@@ -1,5 +1,8 @@
 # README
 
+For collect Primary Data
+
 ## Tools to use
 
-- https://seleniumbase.io/
+- [selenium-base](https://seleniumbase.io/)
+- [browser-use](https://github.com/browser-use/browser-use.git)

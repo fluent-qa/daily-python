@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 from qpyconf import settings
 
-from loc_gov_bonds.test_standard_process import REWORKSPACE, download_dir, source_file_path
+from tests.loc_gov_bonds.test_standard_process import REWORKSPACE, download_dir, source_file_path
 from primary import pd_ext
 from primary.collectors.loc_gov_bonds import download_bonds, scrawler
 

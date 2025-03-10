@@ -3,8 +3,6 @@ from __future__ import annotations
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional, Dict
 
-from sqlmodel import SQLModel
-
 
 class BondData(BaseModel):
     # 地区代码（可能是更广义的编码，具体含义需根据业务场景确定）
